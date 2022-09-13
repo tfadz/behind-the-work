@@ -1,0 +1,108 @@
+body:not(.home) {
+  .site-main {
+    min-height: 500px;
+    padding-bottom: 4rem;
+
+    .entry-header {
+      padding-top: 2rem;
+      padding-bottom: 0;
+
+      h1 {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.post,
+.page {
+  margin: 0;
+}
+
+.updated:not(.published) {
+  display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.25em 0 0;
+}
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
+// Gutenberg
+
+.wp-block-file {
+  display: block;
+  line-height: 1.2;
+  padding: 0 0 0 .5rem;
+
+  // border-radius: 30px;
+  margin-bottom: 1rem;
+
+  // border: 2px solid $white;
+  // max-width: 400px;
+  position: relative;
+
+  &:before {
+    content: "\f56d";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    color: $blue;
+    display: inline-block;
+    font-size: 2rem;
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    top: auto;
+    left: .5rem;
+  }
+
+  a {
+    font-size: 1.25rem;
+    color: $black;
+    font-weight: $regular;
+    text-decoration: none;
+    display: inline-block;
+    max-width: 500px;
+    padding: .1rem 1rem .5rem 2.5rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  a.wp-block-file__button {
+    background: $white;
+    color: $black;
+    font-size: 1rem;
+    font-weight: $regular;
+
+    &:hover {
+      background: $white;
+      color: $black;
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    &:before {
+      content: "\f56d";
+      font-family: "Font Awesome 5 Pro";
+      font-weight: 900;
+      color: $black;
+      display: inline-block;
+      font-size: 2rem;
+      font-style: normal;
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      top: auto;
+      left: .5rem;
+    }
+  }
+}

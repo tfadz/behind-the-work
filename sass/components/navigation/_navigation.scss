@@ -1,0 +1,101 @@
+.main-navigation {
+  display: flex;
+  justify-content: flex-end;
+
+  #primary-menu {
+    display: flex;
+    align-items: center;
+    padding-top: .9rem;
+    list-style: none;
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
+
+    > li {
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+
+      &.current-menu-item {
+        > a {
+          color: $blue;
+        }
+      }
+
+      > a {
+        color: $black;
+        display: inline-block;
+        font-size: 1.25rem;
+        padding: .5rem;
+        position: relative;
+        text-decoration: none;
+
+        &:focus, &:visited {
+          text-decoration: none;
+        }
+
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
+}
+
+.menu-mobile {
+  display: none;
+
+  @media (max-width: 1000px) {
+    background: white;
+    display: block;
+    height: 100vh;
+    padding-left: 1.5rem;
+    position: fixed;
+    top: 0;
+    transform: translateX(-100%);
+    transition: .3s ease-in-out;
+    width: 65vw;
+    z-index: 90;
+  }
+
+  @media (max-width: 480px) {
+    width: 80vw;
+  }
+
+  #primary-menu {
+    padding-top: 2.5rem;
+    padding-left: 1rem;
+
+    li {
+      margin-bottom: 1rem;
+
+      a {
+        font-size: 2rem;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &.show {
+    transform: none;
+  }
+}
+
+// Nav Modal
+
+.nav-modal {
+  background: rgba($black, 0.3);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  visibility: hidden;
+
+  &.active {
+    visibility: visible;
+    z-index: 85;
+  }
+}

@@ -1,0 +1,78 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  margin: 0;
+  padding-bottom: .65rem;
+  letter-spacing: 0.01em;
+  font-weight: $regular;
+
+  &:empty {
+    display: none;
+  }
+
+  @media screen and (max-width: $xsmall) {
+    br {
+      display: none;
+    }
+  }
+}
+
+h1, .h1 {
+  // 48px
+  font-size: 3rem;
+  line-height: 1.3;
+  font-family: $secondary-font;
+
+  &.xl {
+    // 58px
+    font-size: 3.625rem;
+    line-height: 1.3;
+  }
+}
+
+h2, .h2 {
+  // 40px
+  font-size: 2.5rem;
+  font-family: $primary-font;
+  line-height: 1.15;
+  padding-bottom: 1.5rem;
+  color: $blue;
+
+  &.xl {
+    //48px
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    color: $white;
+  }
+
+  @media (max-width: $small) {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+}
+
+h3, .h3 {
+  // 35px
+  font-size: 2.1875rem;
+  line-height: 1.3;
+}
+
+h4, .h4 {
+  font-size: 1.75rem;
+  line-height: normal;
+  padding-bottom: .5rem;
+}
+
+h5, .h5 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+h6, .h6 {
+  font-size: 1.125rem;
+  line-height: normal;
+}

@@ -1,0 +1,49 @@
+.block-padding {
+  @include block-padding;
+}
+
+.padding-top-80 {
+  @include padding-top;
+}
+
+@media (min-width: 576px) and (max-width: 1024px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+.search-form {
+  input[type="search"],
+  textarea {
+    background: $white;
+    border: 1px solid $black;
+    border-radius: 0;
+    font-size: 1.125rem;
+    padding: .45rem 1rem;
+    width: 100%;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    color: $black;
+  }
+
+  input[type="submit"] {
+    border: none;
+    background: $black;
+    border-radius: 0;
+    margin-left: .5rem;
+    color: $white;
+    display: inline-block;
+    font-size: 0.9375rem;
+    line-height: 1;
+    padding: 0.9rem 1.5625rem;
+    text-transform: uppercase;
+    transition: .3s;
+    letter-spacing: 0.09375rem;
+
+    &:hover {
+      background: $blue;
+      color: $white;
+    }
+  }
+}

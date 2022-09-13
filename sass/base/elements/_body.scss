@@ -1,0 +1,8 @@
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background: $color__background-body; // Fallback for when there is no custom background color defined.
+	font-size: 1rem;
+	font-weight: $regular;
+}

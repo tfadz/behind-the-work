@@ -1,0 +1,7 @@
+.DS_Store
+uploads
+node_modules
+package-lock.json
+plugins
+wp-admin
+wp-includes
