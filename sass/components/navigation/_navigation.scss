@@ -25,11 +25,14 @@
 
       > a {
         color: $black;
+        font-weight: $secondary-font;
         display: inline-block;
-        font-size: 1.25rem;
+        font-size: 0.8125rem;
+        font-weight: $bolder;
         padding: .5rem;
         position: relative;
         text-decoration: none;
+        text-transform: uppercase;
 
         &:focus, &:visited {
           text-decoration: none;
