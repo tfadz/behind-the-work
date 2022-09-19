@@ -8,18 +8,18 @@
     padding-top: .9rem;
     list-style: none;
 
-    @media (max-width: 1000px) {
+    @media (max-width: $medium) {
       display: none;
     }
 
     > li {
       &:not(:last-child) {
-        margin-right: 1.5rem;
+        margin-right: 4rem;
       }
 
       &.current-menu-item {
         > a {
-          color: $blue;
+          color: $gray;
         }
       }
 
@@ -27,8 +27,9 @@
         color: $black;
         font-weight: $secondary-font;
         display: inline-block;
-        font-size: 0.8125rem;
+        font-size: 0.75rem;
         font-weight: $bolder;
+        letter-spacing: 0.1em;
         padding: .5rem;
         position: relative;
         text-decoration: none;
@@ -39,7 +40,7 @@
         }
 
         &:hover {
-          color: $blue;
+          color: $gray;
         }
       }
     }

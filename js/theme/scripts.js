@@ -1,46 +1,29 @@
-var premierFunctions = (function($) {
+var behindFunctions = (function($) {
 
   var init = function() {
     sliders();
     mobileMenu();
+    tabs();
   },
 
   sliders = function() {
-    if($('.home')[0]) {
-      $('.slider').slick({
-        autoplay: true,
-        autoplaySpeed: 5000,
-        arrows: false,
-        dots: false,
-        centerMode: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        centerPadding: '0',
-        cssEase: 'ease-in-out',
-        speed: 1000,
-        fade: true,
-        infinite: true,
-        pauseOnFocus: false,
-        pauseOnHover: false
-      });
-      
-      $('.testimonials').slick({
-        autoplay: true,
-        autoplaySpeed: 4000,
-        arrows: false,
-        dots: true,
-        centerMode: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        centerPadding: '0',
-        cssEase: 'ease-in-out',
-        speed: 800,
-        fade: true,
-        infinite: true,
-        pauseOnFocus: false,
-        pauseOnHover: false
-      });
-    }
+  	$('.resources-slider').slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      autoplay: false,
+      arrows: true,
+      dots: false,
+      cssEase: 'ease-in-out',
+      speed: 350,
+      infinite: true,
+      prevArrow: $(".prev-slide"),
+      nextArrow: $(".next-slide"),
+  	});
+
+  },
+  
+  tabs = function() {
+    $('.vertical-tabs__tabs li:first-child a').trigger("click");
   },
   
   mobileMenu = function() {
@@ -58,14 +41,14 @@ var premierFunctions = (function($) {
   }
   
   
-  AOS.init({
-  	  offset: 300,
-  	  once: false,
-  	  duration: 600,
-  	  easing: 'ease-in-out',
-  	  delay: 150,
-  	  disable: 'mobile'
-  	})
+  // AOS.init({
+  // 	  offset: 300,
+  // 	  once: false,
+  // 	  duration: 600,
+  // 	  easing: 'ease-in-out',
+  // 	  delay: 150,
+  // 	  disable: 'mobile'
+  // 	})
 
 return {
   init:init
@@ -73,5 +56,5 @@ return {
 
 })(jQuery);
 
-jQuery(document).ready(premierFunctions.init );
+jQuery(document).ready(behindFunctions.init );
 

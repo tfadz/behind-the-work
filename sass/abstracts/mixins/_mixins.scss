@@ -1,10 +1,21 @@
+@mixin section-heading {
+  font-family: $secondary-font;
+  font-style: normal;
+  font-weight: $bold;
+  font-size: 0.75rem;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8D909A;
+}
+
 @mixin center-block {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-@mixin block-padding {
+@mixin section-padding {
   padding-top: 5.9375rem;
   padding-bottom: 5.9375rem;
 
