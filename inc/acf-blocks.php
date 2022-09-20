@@ -10,6 +10,17 @@ function acf_blocks_init()
         'render_template'   => '/template-parts/blocks/hero.php',
         'category'          => 'behind-blocks',
         'mode'              => 'edit',
+        'icon' => file_get_contents( get_template_directory() . '/images/behind-symbol.svg' ),
+
+    ));
+    
+    acf_register_block_type(array(
+        'name'              => 'testimonials',
+        'title'             => __('Testimonials'),
+        'render_template'   => '/template-parts/blocks/testimonials.php',
+        'category'          => 'behind-blocks',
+        'mode'              => 'edit',
+        'icon' => file_get_contents( get_template_directory() . '/images/behind-symbol.svg' ),
 
     ));
     
@@ -19,16 +30,26 @@ function acf_blocks_init()
         'render_template'   => '/template-parts/blocks/slider-resources.php',
         'category'          => 'behind-blocks',
         'mode'              => 'edit',
-
+        'icon' => file_get_contents( get_template_directory() . '/images/behind-symbol.svg' ),
     ));
     
     acf_register_block_type(array(
-    'name'              => 'vertical_tabs',
-    'title'             => __('Vertical Tabs'),
-    'render_template'   => '/template-parts/blocks/vertical-tabs.php',
-    'category'          => 'behind-blocks',
-    'mode'              => 'edit',
-));
+        'name'              => 'vertical_tabs',
+        'title'             => __('Vertical Tabs'),
+        'render_template'   => '/template-parts/blocks/vertical-tabs.php',
+        'category'          => 'behind-blocks',
+        'mode'              => 'edit',
+        'icon' => file_get_contents( get_template_directory() . '/images/behind-symbol.svg' ),
+    ));
+    
+    acf_register_block_type(array(
+        'name'              => 'slider_overlay',
+        'title'             => __('Slider Image Overlay'),
+        'render_template'   => '/template-parts/blocks/slider-overlay.php',
+        'category'          => 'behind-blocks',
+        'mode'              => 'edit',
+        'icon' => file_get_contents( get_template_directory() . '/images/behind-symbol.svg' ),
+    ));
 
 
 }

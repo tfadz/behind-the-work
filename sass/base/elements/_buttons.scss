@@ -22,9 +22,8 @@ input[type="submit"] {
 }
 
 .button {
-  background: $black;
-  border: none;
-  color: $white;
+  border: 1px solid $black;
+  color: $black;
   font-size: 1.125rem;
   letter-spacing: 0.03em;
   min-width: 220px;

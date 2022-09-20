@@ -1,0 +1,10 @@
+.testimonials {
+	@include section-padding;
+
+  h3 {
+    text-align: center;
+		padding-bottom: 3rem;
+
+    @include section-heading;
+  }
+}

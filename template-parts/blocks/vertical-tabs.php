@@ -1,6 +1,6 @@
 <section class="vertical-tabs <?php if(get_field('vertical_tabs_reversed')) : ?>reversed<?php endif; ?>">
     <div class="container">
-        <div class="row p-5">
+        <div class="row">
             <div class="col">
                 <div class="vertical-tabs-container">
                     <div class="vertical-tabs-col">

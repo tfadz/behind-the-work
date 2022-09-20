@@ -19,6 +19,50 @@ var behindFunctions = (function($) {
       prevArrow: $(".prev-slide"),
       nextArrow: $(".next-slide"),
   	});
+    
+    var $test = $('.testimonials-slider');
+    $test.slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: true,
+      cssEase: 'ease-in-out',
+      speed: 800,
+      fade: true,
+      infinite: true,
+  });
+  
+    var $slickElement = $('.slick-overlay');
+    var $slickElementNav = $('.slick-overlay-nav');
+
+    $slickElement.slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    fade: true,
+    speed: 300,
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+    asNavFor: '.slick-overlay-nav',
+    prevArrow: $(".prev"),
+    nextArrow: $(".next"),
+    cssEase: 'ease-out',
+   
+    });
+    
+    $slickElementNav.slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    asNavFor: '.slick-overlay',
+    arrows: false,
+    cssEase: 'ease-out',
+    variableWidth: true
+   
+    });
 
   },
   
