@@ -1,10 +1,22 @@
 var behindFunctions = (function($) {
 
   var init = function() {
+    navtabs();
     sliders();
     mobileMenu();
     tabs();
   },
+  
+  navtabs = function() {
+
+    $('.nav-tab').each(function(event) {
+        // $(this).find(".nav-tab-highlight").clone().appendTo(".nav-tab-wrapper");
+        var $wrap = $(this).find('.nav-tab-wrapper');
+        var $high = $(this).find('.nav-tab-highlight').addClass('red');
+        $(this).find($high).appendTo($wrap);
+        
+      });
+    },
 
   sliders = function() {
   	$('.resources-slider').slick({

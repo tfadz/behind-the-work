@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Pensacola
+ * @package Behind_The_Work
  */
 
 if ( ! defined( '_S_VERSION' ) ) {

@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Pensacola
+ * @package Behind_The_Work
  */
 
 get_header();

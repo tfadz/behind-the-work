@@ -1,6 +1,9 @@
 <section class="slick-overlay-section">
-    <div class="slick-arrows-wrapper">
+    <div class="slick-overlay-heading">
+        <h5>WHO WE ARE</h5>
+    </div>
 
+    <div class="slick-arrows-wrapper">
         <div class="slick-arrows-wrapper__main">
             <button class="prev"></button>
             <button class="next"></button>

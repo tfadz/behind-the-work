@@ -2,7 +2,7 @@
 /**
  * Pensacola Theme Customizer
  *
- * @package Pensacola
+ * @package Behind_The_Work
  */
 
 /**

@@ -3,7 +3,11 @@
 function register_my_menus() {
 	register_nav_menus(
 		array(
-			'secondary-menu' => __( 'Secondary Menu' ),
+            'hubspot' => __( 'Hubspot' ),
+            'services' => __( 'Services' ),
+            'industries' => __( 'Industries' ),
+            'btw' => __( 'BTW' ),
+            'resources' => __( 'Resources' ),
 			'footer-menu' => __( 'Footer Menu' ),
 		)
 	);

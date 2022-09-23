@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Pensacola
+ * @package Behind_The_Work
  */
 
 ?>
@@ -29,53 +29,113 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'pensacola' ); ?></a>
-
-	<header id="masthead" class="site-header">
-	<div class="container">
-		<div class="row site-header-row">
-			<div class="col-sm-6 col-md-3">
-				<div class="site-branding">
-          <?php if(has_custom_logo()) : ?>
-      				<?php the_custom_logo(); ?>
-      			<?php else : ?>
-      				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="no-logo"><?php echo get_bloginfo(); ?></a>
-      			<?php endif; ?>
-          <?php
-					if ( is_front_page() && is_home() ) :
-						?>
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-						<?php
-					else :
-						?>
-						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-						<?php
-					endif;
-					$premier_description = get_bloginfo( 'description', 'display' );
-					if ( $premier_description || is_customize_preview() ) :
-						?>
-					
-					<?php endif; ?>
-				</div><!-- .site-branding -->
-      </div>
-      <div class="col-sm-6 col-md-9">
-
-      <nav id="site-navigation" class="main-navigation">
-        <?php
-          wp_nav_menu(
-            array(
-              'theme_location' => 'menu-1',
-              'menu_id'        => 'primary-menu',
-            )
-          );
-        ?>
-        <?php get_template_part('template-parts/nav/hamburger') ?>
-
-        </nav>
-
-    	</div>
-		</div>
-
-	</div>
-	</header>
+    <header id="masthead" class="site-header">
+        <div class="container">
+            <div class="row site-header-row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="site-branding">
+                        <?php if(has_custom_logo()) : ?>
+                            <?php the_custom_logo(); ?>
+                        <?php else : ?>
+                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="no-logo"><?php echo get_bloginfo(); ?></a>
+                        <?php endif; ?>
+                        <?php
+                        if ( is_front_page() && is_home() ) :
+                            ?>
+                            <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                            <?php
+                            else :
+                                ?>
+                                <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+                                <?php
+                            endif;
+                            $premier_description = get_bloginfo( 'description', 'display' );
+                            if ( $premier_description || is_customize_preview() ) :
+                                ?>
+                                
+                            <?php endif; ?>
+                        </div><!-- .site-branding -->
+                    </div>
+                    <div class="col-sm-6 col-md-9 nav-col">
+                        <nav id="site-navigation" class="main-navigation">
+                            
+                            <div class="nav-tab hubspot">
+                                <aside class="nav-tab-highlight">
+                                    <h3>Hubspot Solutions</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                </aside>
+                                <?php
+                                    wp_nav_menu(array(
+                                    'theme_location' => 'hubspot',
+                                    'walker' => new submenu_wrap()
+                                    ));
+                                ?>
+                            </div>
+                            
+                            <div class="nav-tab services">
+                                <aside class="nav-tab-highlight">
+                                    <h3>Services Solutions</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                </aside>
+                                <?php
+                                    wp_nav_menu(array(
+                                    'theme_location' => 'services',
+                                    'walker' => new submenu_wrap()
+                                    ));
+                                ?>
+                            </div>
+                            
+                            <div class="nav-tab industries">
+                                <aside class="nav-tab-highlight">
+                                    <h3>Industries Solutions</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                </aside>
+                                <?php
+                                    wp_nav_menu(array(
+                                    'theme_location' => 'industries',
+                                    'walker' => new submenu_wrap()
+                                    ));
+                                ?>
+                            </div>
+                            <div class="nav-tab btw">
+                                <aside class="nav-tab-highlight">
+                                    <h3>BTW Solutions</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                </aside>
+                                <?php
+                                    wp_nav_menu(array(
+                                    'theme_location' => 'btw',
+                                    'walker' => new submenu_wrap()
+                                    ));
+                                ?>
+                            </div>
+                            <div class="nav-tab resources">
+                                <aside class="nav-tab-highlight">
+                                    <h3>Resouces Solutions</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                </aside>
+                                <?php
+                                    wp_nav_menu(array(
+                                    'theme_location' => 'resources',
+                                    'walker' => new submenu_wrap()
+                                    ));
+                                ?>
+                            </div>
+                            
+                            <?php
+                            // wp_nav_menu(
+                            //     array(
+                            //         'theme_location' => 'menu-1',
+                            //         'menu_id'        => 'primary-menu',
+                            //     )
+                            // );
+                            ?>
+                            <?php get_template_part('template-parts/nav/hamburger') ?>
+                            
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
   <?php get_template_part('template-parts/nav/mobile-menu') ?>
 

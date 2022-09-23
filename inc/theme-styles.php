@@ -44,6 +44,56 @@ function yoasttobottom() {
 }
 add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
 
+
+// Menu Descriptions
+
+function prefix_nav_description( $item_output, $item, $depth, $args ) {
+    if ( !empty( $item->description ) ) {
+        $item_output = str_replace( $args->link_after . '</a>', '<span class="menu-item-description">' . $item->description . '</span>' . $args->link_after . '</a>', $item_output );
+    }
+ 
+    return $item_output;
+}
+add_filter( 'walker_nav_menu_start_el', 'prefix_nav_description', 10, 4 );
+
+// add_filter('wp_nav_menu_objects', 'my_wp_nav_menu_objects', 10, 2);
+// 
+// function my_wp_nav_menu_objects( $items, $args ) {
+// 
+//     // loop
+//     foreach( $items as &$item ) {
+// 
+//         // vars
+//         $navHigh = get_field('nav_highlight', $item);
+// 
+//         // append icon
+//         if( $navHigh ) {
+//             $item->title .= '<div class="highlight">' . $navHigh .'</div>';
+//         }
+// 
+//     }
+// 
+//     // return
+//     return $items;
+// }
+
+/* EXTEND SUBNAV
+******************************************/
+
+class submenu_wrap extends Walker_Nav_Menu {
+    function start_lvl( &$output, $depth = 0, $args = array() ) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "\n$indent<div class='nav-tab-wrapper'><ul class='sub-menu'>\n";
+    }
+    function end_lvl( &$output, $depth = 0, $args = array() ) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "$indent</ul></div>\n";
+    }
+}
+
+
+
+
 // Add logo to Login Screen
 
 function my_login_logo() { ?>

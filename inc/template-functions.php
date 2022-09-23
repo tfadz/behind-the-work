@@ -2,7 +2,7 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package Pensacola
+ * @package Behind_The_Work
  */
 
 /**

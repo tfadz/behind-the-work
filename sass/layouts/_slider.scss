@@ -311,7 +311,7 @@
   position: absolute;
   z-index: 99;
   right: 0;
-  top: 9rem;
+  top: 15rem;
   height: auto;
 
   &__main {
@@ -324,12 +324,13 @@
     border: 1px solid $white;
     color: $white;
     font-size: 0;
-    height: 1.85rem;
-    margin: 0 5px;
-    padding: 0;
-    width: 1.5rem;
+    height: 2rem;
+    padding: 2px;
+    width: 2rem;
 
     &.prev {
+      margin-right: 1.5rem;
+
       &:before {
         color: $white;
         content: "\f053";
@@ -353,13 +354,33 @@
         width: 1rem;
       }
     }
+
+    &:hover {
+      cursor: pointer;
+      background: $white;
+      outline: none;
+
+      &.next {
+        &:before {
+          content: "\f054";
+          color: $black;
+        }
+      }
+
+      &.prev {
+        &:before {
+          color: $black;
+          content: "\f053";
+        }
+      }
+    }
   }
 }
 
 .slick-container {
   margin: 2rem auto;
-  width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .slick-overlay {
@@ -373,6 +394,22 @@
 
   &-section {
     position: relative;
+    overflow: hidden;
+  }
+
+  &-heading {
+    position: absolute;
+    z-index: 20;
+    width: 50vw;
+    height: auto;
+    right: -4.25rem;
+    top: 0;
+    color: white;
+    margin: 7rem 0 0 0;
+
+    h5 {
+      @include section-heading;
+    }
   }
 
   .slick-slide {
@@ -415,7 +452,7 @@
     top: auto;
     z-index: 10;
     max-width: 45vw;
-    margin: 13rem auto 0 0;
+    margin: 17rem auto 0 0;
     padding: 0;
 
     p {
@@ -435,11 +472,12 @@
   right: -3rem;
   top: 0;
   color: white;
-  margin-top: 4rem;
+  margin-top: 8rem;
   white-space: nowrap;
 
   .slick-list {
     margin: 0;
+
     // padding: 0 18vw 0 0;
     overflow: hidden;
     width: 100%;
@@ -455,6 +493,7 @@
     display: block;
     padding: 1rem;
     opacity: .5;
+
     // margin-left: 4rem;
 
     h2 {

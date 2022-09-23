@@ -13,6 +13,8 @@
     }
 
     > li {
+      padding-bottom: 2rem;
+
       &:not(:last-child) {
         margin-right: 4rem;
       }
@@ -35,6 +37,10 @@
         text-decoration: none;
         text-transform: uppercase;
 
+        & ~ .sub-menu {
+          display: none;
+        }
+
         &:focus, &:visited {
           text-decoration: none;
         }
@@ -43,6 +49,140 @@
           color: $gray;
         }
       }
+
+      // .sub-menu-wrapper {
+      //   background: white;
+      //   margin: 0;
+      //   flex-wrap: wrap;
+      //   border: 1px solid $black;
+      //   height: 0;
+      //   left: 0;
+      //   margin-top: 1.6rem;
+      //   min-width: 100%;
+      //   overflow: hidden;
+      //   padding: 0;
+      //   position: absolute;
+      //   top: auto;
+      //   transition: all 0.4s cubic-bezier(0.15, 0.36, 0.45, 0.9);
+      //   visibility: hidden;
+      //   width: 100%;
+      //   z-index: -1;
+      // 
+      //   a {
+      //     color: $black;
+      //     padding: 1.1rem 2rem;
+      //     display: block;
+      //     letter-spacing: 2px;
+      //     text-decoration: none;
+      //   }
+      // }
+      // 
+      // .sub-menu {
+      //   display: flex;
+      //   flex-wrap: wrap;
+      //   flex: 2;
+      //   padding: 1rem 0 0 1rem;
+      // 
+      //   li {
+      //     width: 33%;
+      //     margin: 0;
+      //     padding: 1rem .5rem;
+      //     display: inline-block;
+      //     align-items: flex-start;
+      // 
+      //     a {
+      //       font-size: 1.125rem;
+      //       padding: .5rem;
+      //       display: inline-block;
+      // 
+      //       .menu-item-description {
+      //         display: block;
+      //         font-size: 12px;
+      //         padding-top: .5rem;
+      //       }
+      //     }
+      // 
+      //     &:hover {
+      //       background: $black;
+      // 
+      //       a {
+      //         color: $white;
+      //       }
+      //     }
+      //   }
+      // }
+      // 
+      // .highlight {
+      //   display: none;
+      //   background: black;
+      //   color: white;
+      //   padding: 2rem 1rem;
+      //   width: 100%;
+      //   max-width: 400px;
+      //   flex: 1;
+      // 
+      //   &.show {
+      //     display: block;
+      //   }
+      // }
+
+      .sub-menu {
+        @media (min-width: 1025px) {
+          border: none;
+          background: $white;
+          box-shadow: 0px 3px 5px rgb(0 0 0 / 5%);
+          display: none;
+          flex-wrap: wrap;
+          left: 0;
+          list-style: none;
+          margin: 0;
+          padding: 2rem;
+          height: auto;
+          min-height: 200px;
+          min-width: auto;
+          position: absolute;
+          text-align: left;
+          top: auto;
+          transition: all 0.3s ease-in-out;
+          width: 100%;
+          z-index: -1;
+
+          li {
+            display: block;
+            width: 33%;
+
+            a {
+              display: block;
+              font-size: 18px;
+              line-height: 1.3rem;
+              padding: .8rem 1rem;
+              transition: .3s all;
+              position: relative;
+
+              &:hover {
+                background: white;
+                color: $black;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+
+      &:hover > .sub-menu,
+      &:focus > .sub-menu {
+        z-index: 10;
+        display: flex;
+      }
+
+      // &:hover > .sub-menu-wrapper,
+      // &:focus > .sub-menu-wrapper {
+      //   z-index: 10;
+      //   display: flex;
+      //   height: 375px;
+      //   visibility: visible;
+      // }
+   
     }
   }
 }
@@ -101,5 +241,33 @@
   &.active {
     visibility: visible;
     z-index: 85;
+  }
+}
+
+// Mega Menu
+.nav-container {
+  max-width: 1200px;
+  margin: 2rem auto 3rem auto;
+}
+
+.wp-megamenu-wrap .wpmm-nav-wrap > ul.wp-megamenu li.wpmm_mega_menu .wpmm-strees-row-and-content-container > .wp-megamenu-sub-menu > li {
+  padding: 0;
+}
+
+.wp-megamenu-wrap ul#menu-primary .wp-megamenu-sub-menu > li > .wp-megamenu-sub-menu > li.wpmm-col:first-child {
+  background: black;
+  color: white;
+}
+
+#wp-megamenu-menu-1>.wpmm-nav-wrap ul.wp-megamenu>li>a {
+  margin-bottom: 2rem!important;
+}
+
+.wp-megamenu-wrap {
+  ul#menu-primary {
+    #wp-megamenu-item-107396658433923777 {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
