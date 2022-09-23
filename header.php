@@ -62,7 +62,7 @@
                             <div class="nav-tab hubspot">
                                 <aside class="nav-tab-highlight">
                                     <h3>Hubspot Solutions</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                    <p>Quis autem vel eum iure reprehenderit qui in lorem ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem. </p>
                                 </aside>
                                 <?php
                                     wp_nav_menu(array(
@@ -75,7 +75,7 @@
                             <div class="nav-tab services">
                                 <aside class="nav-tab-highlight">
                                     <h3>Services Solutions</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                    <p>Quis autem vel eum iure reprehenderit qui in lorem ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem. </p>
                                 </aside>
                                 <?php
                                     wp_nav_menu(array(
@@ -88,7 +88,7 @@
                             <div class="nav-tab industries">
                                 <aside class="nav-tab-highlight">
                                     <h3>Industries Solutions</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                    <p>Quis autem vel eum iure reprehenderit qui in lorem ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem. </p>
                                 </aside>
                                 <?php
                                     wp_nav_menu(array(
@@ -100,7 +100,7 @@
                             <div class="nav-tab btw">
                                 <aside class="nav-tab-highlight">
                                     <h3>BTW Solutions</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                    <p>Quis autem vel eum iure reprehenderit qui in lorem ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem. </p>
                                 </aside>
                                 <?php
                                     wp_nav_menu(array(
@@ -112,7 +112,7 @@
                             <div class="nav-tab resources">
                                 <aside class="nav-tab-highlight">
                                     <h3>Resouces Solutions</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                    <p>Quis autem vel eum iure reprehenderit qui in lorem ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem. </p>
                                 </aside>
                                 <?php
                                     wp_nav_menu(array(

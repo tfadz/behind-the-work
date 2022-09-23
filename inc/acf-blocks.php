@@ -15,6 +15,16 @@ function acf_blocks_init()
     ));
     
     acf_register_block_type(array(
+        'name'              => 'home_hero',
+        'title'             => __('Home Hero'),
+        'render_template'   => '/template-parts/blocks/home-hero.php',
+        'category'          => 'behind-blocks',
+        'mode'              => 'edit',
+        'icon' => file_get_contents( get_template_directory() . '/images/behind-symbol.svg' ),
+
+    ));
+    
+    acf_register_block_type(array(
         'name'              => 'testimonials',
         'title'             => __('Testimonials'),
         'render_template'   => '/template-parts/blocks/testimonials.php',

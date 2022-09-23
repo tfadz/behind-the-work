@@ -38,6 +38,24 @@
 add_theme_support( 'align-wide' );
 
 
+
+// Button shortcode
+function button_shortcode( $atts, $content = null ) {
+    //set default attributes and values
+    $values = shortcode_atts( array(
+        'url'     => '#',
+        'target'  => '_self',
+        'color'   => '',
+    ), $atts );
+	     
+    return '<a href="'. esc_attr($values['url']) .'"  target="'. esc_attr($values['target']) .'" class="button'. esc_attr($values['color']) .'">'. $content .' </a>';
+ 
+}
+
+add_shortcode('button', 'button_shortcode');
+
+
+
 // Move Yoast to bottom
 function yoasttobottom() {
   return 'low';
@@ -47,14 +65,18 @@ add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
 
 // Menu Descriptions
 
-function prefix_nav_description( $item_output, $item, $depth, $args ) {
-    if ( !empty( $item->description ) ) {
-        $item_output = str_replace( $args->link_after . '</a>', '<span class="menu-item-description">' . $item->description . '</span>' . $args->link_after . '</a>', $item_output );
-    }
- 
-    return $item_output;
+function add_description_to_menu($item_output, $item, $depth, $args) {
+
+   if (strlen($item->description) > 0 ) {
+      // append description after link
+      $item_output .= sprintf('<div class="menu-item-description">%s</div>', esc_html($item->description));
+    
+      // or.. insert description as last item inside the link ($item_output ends with "</a>{$args->after}")
+      // $item_output = substr($item_output, 0, -strlen("</a>{$args->after}")) . sprintf('<span class="description">%s</span >', esc_html($item->description)) . "</a>{$args->after}";
+   }   
+   return $item_output;
 }
-add_filter( 'walker_nav_menu_start_el', 'prefix_nav_description', 10, 4 );
+add_filter('walker_nav_menu_start_el', 'add_description_to_menu', 10, 4);
 
 // add_filter('wp_nav_menu_objects', 'my_wp_nav_menu_objects', 10, 2);
 // 

@@ -37,6 +37,19 @@
         text-decoration: none;
         text-transform: uppercase;
 
+        &:after {
+          content: "\f107";
+          display: inline-block;
+          font-family: "Font Awesome 5 Pro";
+          font-size: 1.35rem;
+          font-weight: 400;
+          color: #9ccd61;
+          position: absolute;
+          top: 0.8rem;
+          right: 3px;
+          z-index: 1;
+        }
+
         & ~ .sub-menu {
           display: none;
         }
@@ -259,8 +272,8 @@
   color: white;
 }
 
-#wp-megamenu-menu-1>.wpmm-nav-wrap ul.wp-megamenu>li>a {
-  margin-bottom: 2rem!important;
+#wp-megamenu-menu-1 > .wpmm-nav-wrap ul.wp-megamenu > li > a {
+  margin-bottom: 2rem !important;
 }
 
 .wp-megamenu-wrap {

@@ -1,0 +1,34 @@
+.home-hero {
+  display: flex;
+
+  &-left {
+    width: 55%;
+    padding-right: 1rem;
+
+    &-logos {
+      display: flex;
+      align-items: center;
+      padding: 2rem 0;
+
+      > div {
+        text-align: center;
+
+        &:not(:last-child) {
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+
+  &-right {
+    width: 45%;
+    border-left: 2px solid $black;
+    padding-left: 4rem;
+    padding-right: 2rem;
+    padding: 2rem 2rem 0 4rem;
+
+    p {
+      @extend .h3;
+    }
+  }
+}

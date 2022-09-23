@@ -12,10 +12,16 @@ var behindFunctions = (function($) {
     $('.nav-tab').each(function(event) {
         // $(this).find(".nav-tab-highlight").clone().appendTo(".nav-tab-wrapper");
         var $wrap = $(this).find('.nav-tab-wrapper');
-        var $high = $(this).find('.nav-tab-highlight').addClass('red');
+        var $high = $(this).find('.nav-tab-highlight');
         $(this).find($high).appendTo($wrap);
-        
       });
+      
+      // $('.menu-item').each(function(event) {
+      //     // $(this).find(".nav-tab-highlight").clone().appendTo(".nav-tab-wrapper");
+      //     var $marvin = $(this).find('.nav-tab-wrapper');
+      //     var $hektor = $marvin.find('.menu-item-description');
+      //   });
+      
     },
 
   sliders = function() {
