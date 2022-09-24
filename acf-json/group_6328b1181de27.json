@@ -98,6 +98,25 @@
                     "maxlength": ""
                 }
             ]
+        },
+        {
+            "key": "field_632e713731511",
+            "label": "Reversed to Black?",
+            "name": "testimonials_reversed",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -118,5 +137,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663614517
+    "modified": 1663988043
 }

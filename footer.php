@@ -33,8 +33,8 @@
         <?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'container_class' => 'footer-menu' ) ); ?>
       </div>
       <div class="col-md-4">
-        <div class="site-info">
-            <h4>Behind the work</h4>
+        <div class="footer-content">
+            <?php the_field('footer_content'), 'options' ?>
         </div>
       </div>
     </div>

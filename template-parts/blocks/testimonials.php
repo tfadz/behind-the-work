@@ -1,4 +1,4 @@
-<section class="testimonials">
+<section class="testimonials <?php if(get_field('testimonials_reversed')) : ?>reversed<?php endif; ?>">
     <div class="container">
         <div class="row">
             <div class="col">

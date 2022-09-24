@@ -20,6 +20,8 @@ var behindFunctions = (function($) {
       //     // $(this).find(".nav-tab-highlight").clone().appendTo(".nav-tab-wrapper");
       //     var $marvin = $(this).find('.nav-tab-wrapper');
       //     var $hektor = $marvin.find('.menu-item-description');
+      //     var $leo = $(this);
+      //     $hektor.clone().appendTo('.menu-item')
       //   });
       
     },
@@ -97,9 +99,9 @@ var behindFunctions = (function($) {
       $('.menu-mobile').toggleClass('show');
     });
 
-    $('li.menu-item-has-children').click(function (e) {
-      $(this).find('.sub-menu').toggle();
-    });
+    // $('li.menu-item-has-children').click(function (e) {
+    //   $(this).find('.sub-menu').toggle();
+    // });
   }
   
   

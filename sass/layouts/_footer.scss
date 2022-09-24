@@ -60,12 +60,19 @@
       font-size: 12px;
     }
   }
+
+  &-content {
+    border: 1px solid $white;
+    padding: 1rem;
+  }
+
   .legal {
     color: #8D909A;
     font-size: 10px;
     font-weight: $bold;
     text-transform: uppercase;
     padding: 1rem 0;
+
     &-section {
       border-top: 1px solid #8D909A;
       margin-top: 1rem;

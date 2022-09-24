@@ -7,4 +7,20 @@
 
     @include section-heading;
   }
+	&.reversed {
+		background: $black;
+		
+		*, h6 {
+			color: $white;
+		}
+		.testimonials-slider .slick-arrow, .testimonials-slider .slick-dots li button {
+			border: 1px solid $white;
+		}
+		.testimonials-slider .slick-dots li.slick-active button {
+			background: $white;
+		}
+		.testimonials-slider .slick-arrow.slick-next:before, .testimonials-slider .slick-arrow.slick-prev:before {
+			color: $white;
+		}
+	}
 }

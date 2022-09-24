@@ -11,7 +11,7 @@
                             <?php if (have_rows( 'home_hero_logos')) : while (have_rows('home_hero_logos')) : the_row(); ?>
                                 <?php $img = get_sub_field('image') ?>
                                 <div>
-                                    <img width="90" src="<?php echo $img['url'] ?>" />
+                                    <img width="120" src="<?php echo $img['url'] ?>" />
                                 </div>
                             <?php endwhile; endif; ?>
                         </div>
