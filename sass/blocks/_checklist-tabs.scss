@@ -1,0 +1,98 @@
+.checklist-tabs {
+  .nav-pills {
+    // justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .nav-item {
+      flex: 33.33%;
+    }
+  }
+
+  .nav-pills .nav-link.active {
+    color: white !important;
+    background-color: transparent;
+    border-radius: 0px;
+    background: #111;
+    border-bottom: 1px solid #111;
+  }
+
+  .nav-pills .nav-link {
+    border-radius: 0px;
+    background: #fff;
+    color: #8D909A;
+    padding: 1rem 0;
+    border: 1px solid black;
+    font-size: 1.125rem;
+    display: block;
+    text-align: center;
+
+    h5 {
+      padding: 0;
+    }
+  }
+
+  .tab-content {
+    padding: 2rem 0;
+    font-size: 1.125rem;
+    width: 100%;
+
+    p {
+      color: $black;
+    }
+
+    .behind-table {
+      border: 1px solid $black;
+
+      tbody td {
+        border: 1px solid $black;
+        padding: 1.15rem 1rem;
+      }
+
+      thead th {
+        background: none;
+        border-bottom: 1px solid $black;
+
+        &.column-3 {
+          border-bottom: 1px solid gray;
+        }
+      }
+
+      thead {
+        th.column-2, th.column-3 {
+          min-width: 210px;
+        }
+      }
+
+      .column-2 {
+        text-align: center;
+        border-left: 1px solid $black;
+        border-right: 1px solid $black;
+        font-weight: $bold;
+
+        .fas {
+          color: $black;
+          font-size: 1.5rem;
+        }
+      }
+
+      .column-3 {
+        background: $black;
+        color: $white;
+        text-align: center;
+
+        .fas {
+          color: $white;
+          font-size: 1.5rem;
+        }
+      }
+
+      tbody .column-3 {
+        border-bottom: 1px solid $white;
+      }
+    }
+  }
+}

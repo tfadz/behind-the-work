@@ -5,18 +5,22 @@
  */
  function behind_scripts() {
      wp_enqueue_style( 'bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css' );
+     
      wp_enqueue_style( 'behind-style', get_stylesheet_uri(), array(), _S_VERSION );
      wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' );
+     wp_enqueue_style( 'lity-css', 'https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.css' );
      
      wp_style_add_data( 'behind-style', 'rtl', 'replace' );
      
      wp_enqueue_script( 'fontawesome-js', 'https://kit.fontawesome.com/317f08a783.js', false );
      wp_enqueue_script( 'slick', get_template_directory_uri() . "/js/slick.js", array( 'jquery' ), '2', true );
      
-     wp_enqueue_script( 'bootstrap-js', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js', false );
-
      
+     wp_enqueue_script( 'bootstrap-js', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js', false );
      wp_enqueue_script( 'behind-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+     wp_enqueue_script( 'aos-theme', 'https://unpkg.com/aos@2.3.1/dist/aos.js', false );
+     wp_enqueue_script( 'aos', get_template_directory_uri() . "/js/aos.js", array( 'jquery' ), '2', true );
+     wp_enqueue_script( 'lity-js', 'https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.js', false );
      wp_enqueue_script( 'behind-scripts', get_template_directory_uri() . '/js/theme.js', array( 'jquery' ), '2', true );
      
      
@@ -61,6 +65,14 @@ function yoasttobottom() {
   return 'low';
 }
 add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
+
+
+// Remove WP admin toolbar CSS
+add_action('get_header', 'my_filter_head');
+
+  function my_filter_head() {
+    remove_action('wp_head', '_admin_bar_bump_cb');
+  }
 
 
 // Menu Descriptions
@@ -112,6 +124,54 @@ class submenu_wrap extends Walker_Nav_Menu {
         $output .= "$indent</ul></div>\n";
     }
 }
+
+// Shortcode custom post resources
+
+add_shortcode( 'list-posts-basic', 'rmcc_post_listing_shortcode1' );
+function rmcc_post_listing_shortcode1( $atts ) {
+    ob_start();
+    $query = new WP_Query( array(
+        'post_type' => 'resource',
+        'posts_per_page' => 2,
+        'order' => 'ASC',
+        'orderby' => 'title',
+    ) );
+    if ( $query->have_posts() ) { ?>
+        <ul class="posts-list">
+            <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+            <li id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>
+                <div class="posts-list-row">
+                    <div class="posts-list-col">
+                        <figure class="posts-list-img"><img src="<?php echo $featured_img_url ?>" alt=""></figure>
+                    </div>
+                    <div class="posts-list-col">
+                    <a href="<?php the_permalink(); ?>">
+                        <?php $terms = get_the_terms(get_the_ID(),'resource_type' ); 
+                        foreach($terms as $term) {
+                            $term_link = get_term_link( $term );
+                            echo '<h5 class="term">' . $term->name . '</h5>';
+                        } ?>
+                        <h4 class="title"><?php the_title(); ?></h4>
+                        <?php $terms = get_the_terms(get_the_ID(),'resource_type' ); 
+                        foreach($terms as $term) {
+                            $term_link = get_term_link( $term );
+                            echo '<h5 class="sm cta">' . 'Go to ' . $term->name . '</h5>';
+                        } ?>
+                    </a>
+                </div>
+                </div>
+            </li>
+            <?php endwhile;
+            wp_reset_postdata(); ?>
+        </ul>
+    <?php $myvariable = ob_get_clean();
+    return $myvariable;
+    }
+}
+
+
+
 
 
 

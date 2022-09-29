@@ -1,9 +1,13 @@
 .home-hero {
   display: flex;
+  height: 580px;
+  overflow: hidden;
 
   &-left {
     width: 55%;
-    padding-right: 1rem;
+    padding-right: 2rem;
+    overflow-y: scroll;
+    padding-bottom: 2rem;
 
     &-logos {
       display: flex;
@@ -22,13 +26,55 @@
 
   &-right {
     width: 45%;
-    border-left: 2px solid $black;
     padding-left: 4rem;
     padding-right: 2rem;
     padding: 2rem 2rem 0 4rem;
+    position: relative;
+    &:before {
+      content: "";
+      border-left: 2px solid $black;
+      height: 480px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2px;
+    }
+    &:after {
+      content: "\f107";
+      font-family: "Font Awesome 5 Pro";
+      font-weight: 900;
+      height: auto;
+      position: absolute;
+      left: -4px;
+      top: 479px;
+      width: 5px;
+    }
 
     p {
       @extend .h3;
+    }
+  }
+
+  &-resources {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+
+    .post {
+      display: block;
+      max-width: 445px;
+
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+
+      .featured-img {
+        height: 250px;
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 1rem;
+      }
     }
   }
 }

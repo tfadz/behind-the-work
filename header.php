@@ -32,7 +32,7 @@
     <header id="masthead" class="site-header">
         <div class="container">
             <div class="row site-header-row">
-                <div class="col-sm-6 col-md-3">
+                <div class="col-md-2">
                     <div class="site-branding">
                         <?php if(has_custom_logo()) : ?>
                             <?php the_custom_logo(); ?>
@@ -56,13 +56,12 @@
                             <?php endif; ?>
                         </div><!-- .site-branding -->
                     </div>
-                    <div class="col-sm-6 col-md-9 nav-col">
+                    <div class="col-sm-6 col-md-10 nav-col">
                         <nav id="site-navigation" class="main-navigation">
                             
                             <div class="nav-tab hubspot">
                                 <aside class="nav-tab-highlight">
-                                    <h3>Hubspot Solutions</h3>
-                                    <p>Quis autem vel eum iure reprehenderit qui in lorem ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem. </p>
+                                    <?php the_field('nav_tab_1', 'options') ?>
                                 </aside>
                                 <?php
                                     wp_nav_menu(array(
@@ -74,8 +73,7 @@
                             
                             <div class="nav-tab services">
                                 <aside class="nav-tab-highlight">
-                                    <h3>Services Solutions</h3>
-                                    <p>Quis autem vel eum iure reprehenderit qui in lorem ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem. </p>
+                                    <?php the_field('nav_tab_2', 'options') ?>
                                 </aside>
                                 <?php
                                     wp_nav_menu(array(
@@ -87,8 +85,7 @@
                             
                             <div class="nav-tab industries">
                                 <aside class="nav-tab-highlight">
-                                    <h3>Industries Solutions</h3>
-                                    <p>Quis autem vel eum iure reprehenderit qui in lorem ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem. </p>
+                                    <?php the_field('nav_tab_3', 'options') ?>
                                 </aside>
                                 <?php
                                     wp_nav_menu(array(
@@ -99,8 +96,7 @@
                             </div>
                             <div class="nav-tab btw">
                                 <aside class="nav-tab-highlight">
-                                    <h3>BTW Solutions</h3>
-                                    <p>Quis autem vel eum iure reprehenderit qui in lorem ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem. </p>
+                                    <?php the_field('nav_tab_4', 'options') ?>
                                 </aside>
                                 <?php
                                     wp_nav_menu(array(
@@ -111,8 +107,7 @@
                             </div>
                             <div class="nav-tab resources">
                                 <aside class="nav-tab-highlight">
-                                    <h3>Resouces Solutions</h3>
-                                    <p>Quis autem vel eum iure reprehenderit qui in lorem ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem. </p>
+                                    <?php the_field('nav_tab_5', 'options') ?>
                                 </aside>
                                 <?php
                                     wp_nav_menu(array(
@@ -121,6 +116,10 @@
                                     ));
                                 ?>
                             </div>
+                            
+                            <a href="" class="button nav-tab-button">
+                                REQUEST QUOTE
+                            </a>
                             
                             <?php
                             // wp_nav_menu(

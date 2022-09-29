@@ -25,6 +25,46 @@ function acf_blocks_init()
     ));
     
     acf_register_block_type(array(
+        'name'              => 'image_card',
+        'title'             => __('Image Card'),
+        'render_template'   => '/template-parts/blocks/image-card.php',
+        'category'          => 'behind-blocks',
+        'mode'              => 'edit',
+        'icon' => file_get_contents( get_template_directory() . '/images/behind-symbol.svg' ),
+
+    ));
+    
+    acf_register_block_type(array(
+        'name'              => 'video_card',
+        'title'             => __('Video Card'),
+        'render_template'   => '/template-parts/blocks/video-card.php',
+        'category'          => 'behind-blocks',
+        'mode'              => 'edit',
+        'icon' => file_get_contents( get_template_directory() . '/images/behind-symbol.svg' ),
+
+    ));
+    
+    acf_register_block_type(array(
+        'name'              => 'checklist_tabs',
+        'title'             => __('Checklist Tabs'),
+        'render_template'   => '/template-parts/blocks/checklist-tabs.php',
+        'category'          => 'behind-blocks',
+        'mode'              => 'edit',
+        'icon' => file_get_contents( get_template_directory() . '/images/behind-symbol.svg' ),
+
+    ));
+    
+    acf_register_block_type(array(
+        'name'              => 'title_block',
+        'title'             => __('Title Block'),
+        'render_template'   => '/template-parts/blocks/title-block.php',
+        'category'          => 'behind-blocks',
+        'mode'              => 'edit',
+        'icon' => file_get_contents( get_template_directory() . '/images/behind-symbol.svg' ),
+
+    ));
+    
+    acf_register_block_type(array(
         'name'              => 'testimonials',
         'title'             => __('Testimonials'),
         'render_template'   => '/template-parts/blocks/testimonials.php',
@@ -47,6 +87,15 @@ function acf_blocks_init()
         'name'              => 'vertical_tabs',
         'title'             => __('Vertical Tabs'),
         'render_template'   => '/template-parts/blocks/vertical-tabs.php',
+        'category'          => 'behind-blocks',
+        'mode'              => 'edit',
+        'icon' => file_get_contents( get_template_directory() . '/images/behind-symbol.svg' ),
+    ));
+    
+    acf_register_block_type(array(
+        'name'              => 'horizontal_tabs',
+        'title'             => __('Horizontal Tabs'),
+        'render_template'   => '/template-parts/blocks/horizontal-tabs.php',
         'category'          => 'behind-blocks',
         'mode'              => 'edit',
         'icon' => file_get_contents( get_template_directory() . '/images/behind-symbol.svg' ),

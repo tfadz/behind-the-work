@@ -2,10 +2,9 @@
   .gform_fields {
     list-style: none;
     margin: 0;
-    padding-right: 2rem;
 
     .gfield {
-      padding-bottom: 1.5rem;
+      padding-bottom: 1rem;
       font-size: 1.125rem;
     }
   }
@@ -14,14 +13,17 @@
   input[type="email"],
   textarea {
     background: $white;
-    border: 2px solid $black;
-    font-size: 1.125rem;
-    padding: 1rem;
+    border: 1px solid $black;
+    font-family: $secondary-font;
+    font-weight: $boldest;
+    font-size: 12px;
+    padding: 1rem!important;
     width: 100%;
+    text-transform: uppercase;
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
-    color: $black;
+    color: #8D909A;
   }
 
   textarea {
@@ -31,17 +33,23 @@
   input[type="submit"] {
     border: none;
     background: $black;
+    border: 1px solid $white;
     color: $white;
     min-width: 190px;
-    margin: 1rem 0;
+    font-family: $secondary-font;
+    font-weight: $boldest;
+    margin: 0;
     padding: 1.5rem;
-    font-size: 1.125rem;
+    font-size: 12px;
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
+    min-width: 100%;
+
 
     &:hover {
-      background: $blue;
+      background: $white;
+      color: $black;
     }
   }
 

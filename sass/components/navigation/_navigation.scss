@@ -1,6 +1,14 @@
 .main-navigation {
   display: flex;
   justify-content: flex-end;
+  overflow: hidden;
+  display: flex;
+  opacity: 0;
+  transition: .3s ease-in;
+
+  &.show {
+    opacity: 1;
+  }
 
   #primary-menu {
     display: flex;

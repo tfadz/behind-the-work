@@ -5,10 +5,14 @@ var behindFunctions = (function($) {
     sliders();
     mobileMenu();
     tabs();
+    swapSvg();
   },
   
   navtabs = function() {
-
+    window.setTimeout(function() { 
+        $('.main-navigation').addClass('show');
+    }, 200);
+    
     $('.nav-tab').each(function(event) {
         // $(this).find(".nav-tab-highlight").clone().appendTo(".nav-tab-wrapper");
         var $wrap = $(this).find('.nav-tab-wrapper');
@@ -25,6 +29,37 @@ var behindFunctions = (function($) {
       //   });
       
     },
+    
+    swapSvg = function() {
+      // Check for page that has the svg
+      $checksvg = $('.horizontal-tabs');
+
+      if($checksvg[0]) {
+       // This swaps img tag and turns into svg file. Must add svg class to img.
+       $('.horizontal-tabs .nav-pills img').addClass('svg');
+       $('.horizontal-tabs .nav-pills img[src$=".svg"] ').each(function() {
+         var $img = jQuery(this);
+         var imgURL = $img.attr('src');
+         var attributes = $img.prop("attributes");
+
+         $.get(imgURL, function(data) {
+           // Get the SVG tag, ignore the rest
+           var $svg = jQuery(data).find('svg');
+
+           // Remove any invalid XML tags
+           $svg = $svg.removeAttr('xmlns:a');
+
+           // Loop through IMG attributes and apply on SVG
+           $.each(attributes, function() {
+             $svg.attr(this.name, this.value);
+           });
+
+           // Replace IMG with SVG
+           $img.replaceWith($svg);
+           }, 'xml');
+       });
+     }
+   },
 
   sliders = function() {
   	$('.resources-slider').slick({
@@ -88,6 +123,8 @@ var behindFunctions = (function($) {
   
   tabs = function() {
     $('.vertical-tabs__tabs li:first-child a').trigger("click");
+    $('.horizontal-tabs .nav-pills li:first-child a').addClass('active');
+    $('.checklist-tabs .nav-pills li:first-child a').addClass('active');
   },
   
   mobileMenu = function() {
@@ -103,16 +140,7 @@ var behindFunctions = (function($) {
     //   $(this).find('.sub-menu').toggle();
     // });
   }
-  
-  
-  // AOS.init({
-  // 	  offset: 300,
-  // 	  once: false,
-  // 	  duration: 600,
-  // 	  easing: 'ease-in-out',
-  // 	  delay: 150,
-  // 	  disable: 'mobile'
-  // 	})
+
 
 return {
   init:init
