@@ -1,0 +1,113 @@
+.resources-gallery {
+  background: $black;
+  color: $white;
+  padding: 4rem 0;
+
+  &-pager {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+
+    > div {
+      display: flex;
+      align-items: center;
+    }
+
+    .show-me {
+      display: block;
+      font-family: $secondary-font;
+      font-size: 12px;
+      font-weight: $bold;
+      color: $white;
+      padding-right: 1rem;
+    }
+  }
+
+  .facetwp-template {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .facetwp-checkbox {
+    background: $black !important;
+    border: 1px solid $white!important;
+    border: none;
+    color: $white;
+    display: inline-block;
+    font-family: $secondary-font;
+    font-size: 12px!important;
+    font-weight: $bolder;
+    letter-spacing: 0.12em;
+    margin: 0 .85rem;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:hover {
+      background: $white !important;
+      color: $black;
+      border: 1px solid $white;
+    }
+  }
+
+  .facetwp-checkbox.checked {
+    background: $white !important;
+    color: $black;
+    border: 1px solid $white;
+  }
+
+  .facetwp-facet-resources {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+
+  .facetwp-counter {
+    display: none;
+  }
+
+  .post {
+    margin-bottom: 3rem;
+    display: block;
+
+    .featured-img {
+      height: 200px;
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        transition: .4s ease;
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      .featured-img {
+        img {
+          transform: scale(1.08);
+        }
+      }
+    }
+
+    .cta {
+      display: block;
+      margin: 8px 0;
+      text-transform: uppercase;
+      font-weight: $bolder;
+      text-decoration: underline;
+      text-underline-offset: 0.65em;
+      text-decoration-thickness: 1px;
+    }
+  }
+}

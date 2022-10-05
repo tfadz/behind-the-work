@@ -25,3 +25,13 @@
     max-width: 1200px;
   }
 }
+
+.wp-block-button__link.has-background {
+  display: block;
+  transition: .3s ease;
+
+  &:hover {
+    background: $white !important;
+    color: $black!important;
+  }
+}

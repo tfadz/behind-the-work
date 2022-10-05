@@ -62,6 +62,8 @@
                             <div class="nav-tab hubspot">
                                 <aside class="nav-tab-highlight">
                                     <?php the_field('nav_tab_1', 'options') ?>
+                                    <?php $nav1 = get_field('nav_tab_1_link', 'options') ?>
+                                    <a class="nav-tab-footer" href="<?php echo $nav1['url']; ?>"><?php echo $nav1['title']; ?></a>
                                 </aside>
                                 <?php
                                     wp_nav_menu(array(
@@ -74,6 +76,8 @@
                             <div class="nav-tab services">
                                 <aside class="nav-tab-highlight">
                                     <?php the_field('nav_tab_2', 'options') ?>
+                                    <?php $nav2 = get_field('nav_tab_2_link', 'options') ?>
+                                    <a class="nav-tab-footer" href="<?php echo $nav2['url']; ?>"><?php echo $nav2['title']; ?></a>
                                 </aside>
                                 <?php
                                     wp_nav_menu(array(
@@ -86,6 +90,8 @@
                             <div class="nav-tab industries">
                                 <aside class="nav-tab-highlight">
                                     <?php the_field('nav_tab_3', 'options') ?>
+                                    <?php $nav3 = get_field('nav_tab_3_link', 'options') ?>
+                                    <a class="nav-tab-footer" href="<?php echo $nav3['url']; ?>"><?php echo $nav3['title']; ?></a>
                                 </aside>
                                 <?php
                                     wp_nav_menu(array(
@@ -97,6 +103,12 @@
                             <div class="nav-tab btw">
                                 <aside class="nav-tab-highlight">
                                     <?php the_field('nav_tab_4', 'options') ?>
+                                    <?php $nav4 = get_field('nav_tab_4_link', 'options') ?>
+                                    <?php if($nav4) : ?>
+                                        <a class="nav-tab-footer" href="<?php echo $nav4['url']; ?>"><?php echo $nav4['title']; ?></a>
+                                    <?php else : ?>
+                                        <br><br>
+                                    <?php endif; ?>
                                 </aside>
                                 <?php
                                     wp_nav_menu(array(
@@ -108,6 +120,11 @@
                             <div class="nav-tab resources">
                                 <aside class="nav-tab-highlight">
                                     <?php the_field('nav_tab_5', 'options') ?>
+                                    <?php $nav5 = get_field('nav_tab_5_link', 'options') ?>
+                                    <?php if($nav5) : ?><a class="nav-tab-footer" href="<?php echo $nav5['url']; ?>"><?php echo $nav5['title']; ?></a>
+                                    <?php else : ?>
+                                        <br><br>
+                                    <?php endif; ?>
                                 </aside>
                                 <?php
                                     wp_nav_menu(array(

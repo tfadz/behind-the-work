@@ -15,6 +15,16 @@ function acf_blocks_init()
     ));
     
     acf_register_block_type(array(
+        'name'              => 'accordion',
+        'title'             => __('Accordion'),
+        'render_template'   => '/template-parts/blocks/accordion.php',
+        'category'          => 'behind-blocks',
+        'mode'              => 'edit',
+        'icon' => file_get_contents( get_template_directory() . '/images/behind-symbol.svg' ),
+
+    ));
+    
+    acf_register_block_type(array(
         'name'              => 'home_hero',
         'title'             => __('Home Hero'),
         'render_template'   => '/template-parts/blocks/home-hero.php',
@@ -51,7 +61,35 @@ function acf_blocks_init()
         'category'          => 'behind-blocks',
         'mode'              => 'edit',
         'icon' => file_get_contents( get_template_directory() . '/images/behind-symbol.svg' ),
+    ));
+    
+    acf_register_block_type(array(
+        'name'              => 'team_cards',
+        'title'             => __('Team Cards'),
+        'render_template'   => '/template-parts/blocks/team-cards.php',
+        'category'          => 'behind-blocks',
+        'mode'              => 'edit',
+        'icon' => file_get_contents( get_template_directory() . '/images/behind-symbol.svg' ),
 
+    ));
+    
+    
+    acf_register_block_type(array(
+        'name'              => 'cards_grid',
+        'title'             => __('Cards Grid'),
+        'render_template'   => '/template-parts/blocks/cards-grid.php',
+        'category'          => 'behind-blocks',
+        'mode'              => 'edit',
+        'icon' => file_get_contents( get_template_directory() . '/images/behind-symbol.svg' ),
+    ));
+    
+    acf_register_block_type(array(
+        'name'              => 'timeline_tabs',
+        'title'             => __('Timeline Tabs'),
+        'render_template'   => '/template-parts/blocks/timeline-tabs.php',
+        'category'          => 'behind-blocks',
+        'mode'              => 'edit',
+        'icon' => file_get_contents( get_template_directory() . '/images/behind-symbol.svg' ),
     ));
     
     acf_register_block_type(array(

@@ -1,0 +1,94 @@
+.accordion {
+  &-section {
+    margin: 2rem 0 5rem 0;
+  }
+
+  &-question {
+    color: $black;
+    display: flex;
+    font-size: 1.375rem;
+    justify-content: space-between;
+    line-height: 2.35rem;
+    padding: 1.5rem 2.5rem 1.5rem 0;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    border-bottom: 1px solid $black;
+
+    h2 {
+      padding-bottom: 0;
+    }
+
+    &:after {
+      content: "\f067";
+      color: $black;
+      font-family: "Font Awesome 5 Pro";
+      font-weight: 900;
+      display: block;
+      position: absolute;
+      top: auto;
+      right: 0;
+      margin: 1rem 1rem 0 0;
+    }
+
+    &.active {
+      border-bottom: none;
+
+      h2 {
+        font-weight: $bold;
+      }
+
+      &:after {
+        content: "\f068";
+        color: $black;
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 900;
+        display: block;
+        margin-right: 1rem;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      font-weight: $bold;
+    }
+  }
+
+  &-answer {
+    color: $white;
+    background: $black;
+    font-size: 1.375rem;
+    line-height: 2.35rem;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: 100vw;
+    position: relative;
+    right: 50%;
+    width: 100vw;
+
+    &.active {
+      display: block;
+      opacity: 1;
+      max-height: fit-content;
+      margin-bottom: 1rem;
+      padding: 4rem 1rem 6rem 1rem;
+
+      h5 {
+        color: $white;
+      }
+
+      h3 {
+        padding: 0 3rem 2rem 0;
+      }
+    }
+
+    .cta {
+      border: 1px solid $white;
+      margin: 1rem 0 0 0;
+    }
+  }
+}

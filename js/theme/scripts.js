@@ -2,6 +2,7 @@ var behindFunctions = (function($) {
 
   var init = function() {
     navtabs();
+    accordion();
     sliders();
     mobileMenu();
     tabs();
@@ -28,6 +29,16 @@ var behindFunctions = (function($) {
       //     $hektor.clone().appendTo('.menu-item')
       //   });
       
+    },
+    
+    accordion = function() {
+      $accord = $('.accordion-question');
+      if ($accord[0]) {
+        $accord.click(function(event) {
+          $(this).toggleClass('active');
+          $(this).next().toggleClass('active');
+        });
+      }
     },
     
     swapSvg = function() {
@@ -122,9 +133,10 @@ var behindFunctions = (function($) {
   },
   
   tabs = function() {
-    $('.vertical-tabs__tabs li:first-child a').trigger("click");
+    $('.vertical-tabs__tabs li:first-child a, .timeline-tabs__tabs li:first-child a').trigger("click");
     $('.horizontal-tabs .nav-pills li:first-child a').addClass('active');
     $('.checklist-tabs .nav-pills li:first-child a').addClass('active');
+
   },
   
   mobileMenu = function() {

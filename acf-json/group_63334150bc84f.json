@@ -22,6 +22,21 @@
             "media_upload": 1
         },
         {
+            "key": "field_633634c579012",
+            "label": "Nav Tab 1 Link",
+            "name": "nav_tab_1_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_6333418e603ed",
             "label": "Nav Tab 2",
             "name": "nav_tab_2",
@@ -39,6 +54,21 @@
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 1
+        },
+        {
+            "key": "field_63363aeaf6324",
+            "label": "Nav Tab 2 Link",
+            "name": "nav_tab_2_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         },
         {
             "key": "field_63334194603ee",
@@ -60,6 +90,21 @@
             "media_upload": 1
         },
         {
+            "key": "field_63363b47c3297",
+            "label": "Nav Tab 3 Link",
+            "name": "nav_tab_3_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_63334198603ef",
             "label": "Nav Tab 4",
             "name": "nav_tab_4",
@@ -79,6 +124,21 @@
             "media_upload": 1
         },
         {
+            "key": "field_63363b6cc3298",
+            "label": "Nav Tab 4 Link",
+            "name": "nav_tab_4_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_6333419e603f0",
             "label": "Nav Tab 5",
             "name": "nav_tab_5",
@@ -96,6 +156,21 @@
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 1
+        },
+        {
+            "key": "field_63363b7ec3299",
+            "label": "Nav Tab 5 Link",
+            "name": "nav_tab_5_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         }
     ],
     "location": [
@@ -116,5 +191,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664303524
+    "modified": 1664499209
 }

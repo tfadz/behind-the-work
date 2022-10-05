@@ -44,6 +44,15 @@
         .fa {
           font-size: .8rem;
         }
+
+        &:hover {
+          background: $white;
+          text-decoration: none;
+
+          .fa {
+            color: $black;
+          }
+        }
       }
     }
   }
@@ -73,6 +82,10 @@
       font-family: $secondary-font;
       font-weight: $bolder;
       font-size: 12px;
+
+      &:hover {
+        color: $gray-light;
+      }
     }
   }
 

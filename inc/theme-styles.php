@@ -58,7 +58,11 @@ function button_shortcode( $atts, $content = null ) {
 
 add_shortcode('button', 'button_shortcode');
 
-
+// Excerpt
+function my_excerpt_length($length){
+return 30;
+}
+add_filter('excerpt_length', 'my_excerpt_length');
 
 // Move Yoast to bottom
 function yoasttobottom() {
