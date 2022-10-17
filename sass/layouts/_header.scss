@@ -1,6 +1,11 @@
 .site-header {
   padding: 1.5rem 0;
 
+  @media (max-width: $medium) {
+    position: relative;
+    z-index: 99;
+  }
+
   @media (max-width: $xsmall) {
     padding: .5rem 0;
   }
@@ -19,7 +24,7 @@
       display: flex;
     }
   }
-  
+
   .nav-col {
     position: initial;
   }
@@ -42,6 +47,22 @@
         max-width: 130px;
       }
     }
+
+    .custom-logo-link {
+      display: block;
+
+      &.hide {
+        display: none;
+      }
+    }
+
+    &-mobile-logo {
+      display: none;
+
+      &.show {
+        display: block;
+      }
+    }
   }
 
   .hamburger {
@@ -61,13 +82,9 @@
       display: none;
       position: absolute;
       right: 1rem;
-      top: auto;
-      width: 2.5rem;
+      top: 1.1rem;
+      width: 2rem;
       z-index: 99;
-
-      @media (max-width: $xsmall) {
-        top: 1.1rem;
-      }
 
       &.active {
         background: $black;

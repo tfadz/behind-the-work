@@ -3,6 +3,10 @@
     margin-right: 2.5rem;
   }
 
+  @media (max-width: $medium) {
+    display: none;
+  }
+
   &-footer {
     text-transform: uppercase;
     border-top: 1px solid $white;
@@ -221,6 +225,10 @@
     font-weight: $bolder;
     position: relative;
     top: .5rem;
+
+    @media (max-width: $medium) {
+      display: none;
+    }
 
     &:hover {
       min-width: 0;

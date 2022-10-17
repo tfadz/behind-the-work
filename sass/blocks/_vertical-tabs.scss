@@ -6,6 +6,10 @@
 
   &-container {
     display: flex;
+
+    @media (max-width: $medium) {
+      display: block;
+    }
   }
 
   .nav-pills {
@@ -31,6 +35,14 @@
     border-right: 1px solid $white;
     width: 54%;
     padding-bottom: 8rem;
+
+    @media (max-width: $medium) {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid $white;
+      margin-bottom: 4rem;
+      padding-bottom: 2rem;
+    }
   }
 
   &__tabs {
@@ -41,6 +53,11 @@
         color: #8D909A;
         font-size: 2.5rem;
         line-height: 1;
+
+        @media (max-width: $medium) {
+          font-size: 1.5rem;
+          line-height: 2rem;
+        }
 
         &.active {
           color: $white;
@@ -68,6 +85,11 @@
   &__content {
     padding-left: 4rem;
     width: 46%;
+
+    @media (max-width: $medium) {
+      width: 100%;
+      padding-left: 0;
+    }
 
     p {
       font-size: 1.5rem;
@@ -97,6 +119,11 @@
 
     .vertical-tabs-col {
       border-right: 1px solid $black;
+
+      @media (max-width: $medium) {
+        border-right: none;
+        border-bottom: 1px solid $black;
+      }
     }
 
     h4 {

@@ -24,10 +24,16 @@
     -moz-appearance: none;
     -webkit-appearance: none;
     color: #8D909A;
+    
+    &::placeholder {
+      font-size: 12px;
+      font-family: $secondary-font;
+      font-weight: $bolder;
+    }
   }
 
   textarea {
-    height: 200px;
+    height: 200px!important;
   }
 
   input[type="submit"] {
@@ -115,5 +121,37 @@
   a {
     border-bottom: 1px solid $blue;
     text-decoration: none;
+  }
+}
+
+// Request Quote
+
+.request-quote {
+  legend.gfield_label_before_complex {
+    font-weight: $regular !important;
+    margin-bottom: 0 !important;
+  }
+
+  .gfield_checkbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1.85rem;
+    overflow: auto;
+    padding: .5rem 0;
+    font-weight: $bold;
+    text-transform: uppercase;
+
+    input[type="checkbox"] {
+      vertical-align: top;
+      margin-top: 4px;
+      margin-right: 5px;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      -o-appearance: none;
+      border: 1px solid $black;
+      width: 15px;
+      height: 15px;
+    }
   }
 }

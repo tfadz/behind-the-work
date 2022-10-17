@@ -141,8 +141,26 @@ function acf_blocks_init()
     
     acf_register_block_type(array(
         'name'              => 'slider_overlay',
-        'title'             => __('Slider Image Overlay'),
+        'title'             => __('Slider Design 1'),
         'render_template'   => '/template-parts/blocks/slider-overlay.php',
+        'category'          => 'behind-blocks',
+        'mode'              => 'edit',
+        'icon' => file_get_contents( get_template_directory() . '/images/behind-symbol.svg' ),
+    ));
+    
+    acf_register_block_type(array(
+        'name'              => 'slider_design2',
+        'title'             => __('Slider Design 2'),
+        'render_template'   => '/template-parts/blocks/slider-2.php',
+        'category'          => 'behind-blocks',
+        'mode'              => 'edit',
+        'icon' => file_get_contents( get_template_directory() . '/images/behind-symbol.svg' ),
+    ));
+    
+    acf_register_block_type(array(
+        'name'              => 'slider_design3',
+        'title'             => __('Slider Design 3'),
+        'render_template'   => '/template-parts/blocks/slider-3.php',
         'category'          => 'behind-blocks',
         'mode'              => 'edit',
         'icon' => file_get_contents( get_template_directory() . '/images/behind-symbol.svg' ),

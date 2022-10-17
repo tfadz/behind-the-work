@@ -3,6 +3,44 @@
     "title": "Team Cards",
     "fields": [
         {
+            "key": "field_6342d03ccd745",
+            "label": "Eyebrow",
+            "name": "team_cards_eyebrow",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6342d04fcd746",
+            "label": "Title",
+            "name": "team_cards_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_633ddd07edc2f",
             "label": "Team Cards",
             "name": "team_cards",
@@ -24,6 +62,25 @@
             "min": "",
             "max": "",
             "elements": ""
+        },
+        {
+            "key": "field_63409ad64d861",
+            "label": "Feature First Member?",
+            "name": "feature_first",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 0
         }
     ],
     "location": [
@@ -44,5 +101,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664998700
+    "modified": 1665323099
 }

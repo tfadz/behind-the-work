@@ -17,11 +17,11 @@ get_header();
         <div class="row">
           <div class="col">
             <header class="page-header">
-      				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'pensacola' ); ?></h1>
+      				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'behind-the-work' ); ?></h1>
       			</header><!-- .page-header -->
 
       			<div class="page-content">
-      				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'pensacola' ); ?></p>
+      				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'behind-the-work' ); ?></p>
 
     					<?php
     					get_search_form();

@@ -1,33 +1,43 @@
 .cards-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-	grid-row-gap: 2rem;
-	grid-column-gap: 1.85rem;
+  grid-row-gap: 2rem;
+  grid-column-gap: 1.85rem;
   overflow: auto;
-	padding: 2rem 0 6rem 0;
+  padding: 2rem 0 6rem 0;
+
+  &-section {
+    h6 {
+      padding: 1rem 0;
+    }
+  }
 
   &-card {
-		border: 1px solid $black;
-		min-height: 350px;
-		padding: 4rem 2rem;
-		text-align: center;
+    border: 1px solid $black;
+    min-height: 350px;
+    padding: 4rem 2rem 2rem 2rem;
+    text-align: center;
     height: 100%;
     overflow: hidden;
     position: relative;
-		
-		.icon {
-			width: 80px;
-			height: 80px;
-			display: block;
-			text-align: center;
-			margin: 0 auto 2rem auto;
-		}
+
+    h3 {
+      padding-bottom: 0;
+    }
+
+    .icon {
+      width: 80px;
+      height: 80px;
+      display: block;
+      text-align: center;
+      margin: 0 auto 2rem auto;
+    }
 
     &__overlay {
       padding: 1rem 2rem;
       position: absolute;
       background: $black;
-			color: $white;
+      color: $white;
       left: 0;
       top: 100%;
       width: 100%;
@@ -37,17 +47,47 @@
       display: flex;
       align-items: center;
       top: -100%;
-			text-align: left;
-			p {
-				text-align: left;
-			}
+      text-align: left;
+
+      p {
+        text-align: left;
+      }
     }
 
     &:hover {
-			cursor: pointer;
+      cursor: pointer;
+
       .cards-grid-card__overlay {
         top: 0;
       }
+    }
+  }
+
+  &--reverse {
+    background: $black;
+    color: $white;
+    padding: 6rem 0 4rem 0;
+
+    .cards-grid-card {
+      border: 1px solid $white;
+
+      // .svg {
+      //   height: 55px;
+      //   width: 65px;
+      //   object-fit: cover;
+      //   margin-bottom: .85rem;
+      // 
+      //   path {
+      //     stroke: $white;
+      //     fill: $white;
+      //   }
+      // }
+   
+    }
+
+    .cards-grid-card__overlay {
+      background: $white;
+      color: $black;
     }
   }
 }

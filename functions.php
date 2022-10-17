@@ -12,7 +12,7 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
-if ( ! function_exists( 'premier_setup' ) ) :
+if ( ! function_exists( 'behind_the_work_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -20,14 +20,14 @@ if ( ! function_exists( 'premier_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function premier_setup() {
+	function behind_the_work_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on Pensacola, use a find and replace
-		 * to change 'pensacola' to the name of your theme in all the template files.
+		 * to change 'behind-the-work' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'pensacola', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'behind-the-work', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -50,7 +50,7 @@ if ( ! function_exists( 'premier_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'pensacola' ),
+				'menu-1' => esc_html__( 'Primary', 'behind-the-work' ),
 			)
 		);
 
@@ -75,7 +75,7 @@ if ( ! function_exists( 'premier_setup' ) ) :
 		add_theme_support(
 			'custom-background',
 			apply_filters(
-				'premier_custom_background_args',
+				'behind_the_work_custom_background_args',
 				array(
 					'default-color' => 'ffffff',
 					'default-image' => '',
@@ -102,7 +102,7 @@ if ( ! function_exists( 'premier_setup' ) ) :
 		);
 	}
 endif;
-add_action( 'after_setup_theme', 'premier_setup' );
+add_action( 'after_setup_theme', 'behind_the_work_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -111,22 +111,22 @@ add_action( 'after_setup_theme', 'premier_setup' );
  *
  * @global int $content_width
  */
-function premier_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'premier_content_width', 640 );
+function behind_the_work_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'behind_the_work_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'premier_content_width', 0 );
+add_action( 'after_setup_theme', 'behind_the_work_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function premier_widgets_init() {
+function behind_the_work_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'pensacola' ),
+			'name'          => esc_html__( 'Sidebar', 'behind-the-work' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'pensacola' ),
+			'description'   => esc_html__( 'Add widgets here.', 'behind-the-work' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -134,7 +134,7 @@ function premier_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'premier_widgets_init' );
+add_action( 'widgets_init', 'behind_the_work_widgets_init' );
 
 require get_template_directory() . '/inc/theme-styles.php';
 require get_template_directory() . '/inc/theme-navigation.php';

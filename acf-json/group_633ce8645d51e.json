@@ -3,6 +3,25 @@
     "title": "Cards Grid",
     "fields": [
         {
+            "key": "field_6342cdf833a6e",
+            "label": "Eyebrow",
+            "name": "cards_grid_eyebrow",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_633ce8656e8e4",
             "label": "Cards Grid",
             "name": "cards_grid",
@@ -23,26 +42,6 @@
             "button_label": "Add Card",
             "rows_per_page": 20,
             "sub_fields": [
-                {
-                    "key": "field_633ce87a6e8e5",
-                    "label": "Title",
-                    "name": "title",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_633ce8656e8e4"
-                },
                 {
                     "key": "field_633ceb5d265e8",
                     "label": "Icon",
@@ -69,6 +68,26 @@
                     "parent_repeater": "field_633ce8656e8e4"
                 },
                 {
+                    "key": "field_633ce87a6e8e5",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_633ce8656e8e4"
+                },
+                {
                     "key": "field_633ce8836e8e6",
                     "label": "Overlay",
                     "name": "overlay",
@@ -89,6 +108,25 @@
                     "parent_repeater": "field_633ce8656e8e4"
                 }
             ]
+        },
+        {
+            "key": "field_6340a63f995aa",
+            "label": "Reverse to Black?",
+            "name": "reverse_cards",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 0
         }
     ],
     "location": [
@@ -109,5 +147,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664936812
+    "modified": 1665322511
 }

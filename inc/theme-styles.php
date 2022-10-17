@@ -8,6 +8,10 @@
      
      wp_enqueue_style( 'behind-style', get_stylesheet_uri(), array(), _S_VERSION );
      wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' );
+     // wp_enqueue_style( 'slick-theme', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css');
+     wp_enqueue_style( 'slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.css' );
+
+
      wp_enqueue_style( 'lity-css', 'https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.css' );
      
      wp_style_add_data( 'behind-style', 'rtl', 'replace' );

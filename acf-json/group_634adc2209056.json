@@ -1,11 +1,11 @@
 {
-    "key": "group_6328e1ae55e70",
-    "title": "Slider Image Overlay",
+    "key": "group_634adc2209056",
+    "title": "Slider- Design 2",
     "fields": [
         {
-            "key": "field_6328e1b41b1e2",
-            "label": "Slider Design 1",
-            "name": "slider_overlay",
+            "key": "field_634adc457f6e8",
+            "label": "Slider Design 2",
+            "name": "slider_design2",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -20,36 +20,11 @@
             "min": 0,
             "max": 0,
             "collapsed": "",
-            "button_label": "Add Slide",
+            "button_label": "Add slide",
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_6328e1ca1b1e3",
-                    "label": "Image",
-                    "name": "image",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "preview_size": "medium",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "parent_repeater": "field_6328e1b41b1e2"
-                },
-                {
-                    "key": "field_6328e1d51b1e4",
+                    "key": "field_634adc91a9854",
                     "label": "Title",
                     "name": "title",
                     "type": "text",
@@ -62,14 +37,39 @@
                         "id": ""
                     },
                     "default_value": "",
+                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": "",
-                    "parent_repeater": "field_6328e1b41b1e2"
+                    "parent_repeater": "field_634adc457f6e8"
                 },
                 {
-                    "key": "field_6328e1dd1b1e5",
+                    "key": "field_634adc637f6ea",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_634adc457f6e8"
+                },
+                {
+                    "key": "field_634adc547f6e9",
                     "label": "Text",
                     "name": "text",
                     "type": "textarea",
@@ -82,11 +82,11 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": "",
                     "maxlength": "",
-                    "rows": 4,
+                    "rows": "",
+                    "placeholder": "",
                     "new_lines": "br",
-                    "parent_repeater": "field_6328e1b41b1e2"
+                    "parent_repeater": "field_634adc457f6e8"
                 }
             ]
         }
@@ -96,7 +96,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/slider-overlay"
+                "value": "acf\/slider-design2"
             }
         ]
     ],
@@ -109,5 +109,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1665849479
+    "modified": 1665927547
 }

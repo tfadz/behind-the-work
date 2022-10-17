@@ -1,17 +1,22 @@
 .title-block {
-	padding: 2rem 0 8rem 3rem;
+  padding: 2rem 0 8rem 3rem;
+
+  @media (max-width: $medium) {
+    padding: 1rem 0 2rem 0;
+  }
 
   h6 {
     padding-bottom: 2rem;
   }
-	h1 {
-		padding-bottom: 1.75rem;
-	}
+
+  h1 {
+    padding-bottom: 1.75rem;
+  }
 
   h3 {
     position: relative;
-		display: flex;
-		padding-right: 1rem;
+    display: flex;
+    padding-right: 1rem;
 
     &:before {
       content: "\f107";
@@ -21,7 +26,7 @@
       font-size: 1.65rem;
       font-weight: 900;
       margin-top: 2px;
-			margin-right: 2rem;
+      margin-right: 2rem;
       position: relative;
       left: 5px;
       transform-origin: center center;

@@ -43,7 +43,7 @@
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'pensacola' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'behind-the-work' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -56,7 +56,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'pensacola' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'behind-the-work' ),
 				'after'  => '</div>',
 			)
 		);

@@ -1,7 +1,7 @@
 <?php
 /**
 
-* Template Name: Resources
+* Template Name: Tutorial
 
 */
 

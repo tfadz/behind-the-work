@@ -20,7 +20,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&family=Raleway:wght@400;700;800;900&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.css" rel="stylesheet">
 
 
 </head>
@@ -28,11 +27,11 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'pensacola' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'behind-the-work' ); ?></a>
     <header id="masthead" class="site-header">
         <div class="container">
             <div class="row site-header-row">
-                <div class="col-md-2">
+                <div class="col-6 col-md-2">
                     <div class="site-branding">
                         <?php if(has_custom_logo()) : ?>
                             <?php the_custom_logo(); ?>
@@ -45,15 +44,11 @@
                             <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
                             <?php
                             else :
-                                ?>
-                                <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-                                <?php
-                            endif;
-                            $premier_description = get_bloginfo( 'description', 'display' );
-                            if ( $premier_description || is_customize_preview() ) :
-                                ?>
-                                
+                                ?>                                
                             <?php endif; ?>
+                            
+                            <img class="site-branding-mobile-logo" src="<?php bloginfo('template_directory'); ?>/images/logo-reversed.svg" alt="">
+
                         </div><!-- .site-branding -->
                     </div>
                     <div class="col-sm-6 col-md-10 nav-col">
@@ -133,10 +128,13 @@
                                     ));
                                 ?>
                             </div>
-                            
-                            <a href="" class="button nav-tab-button">
-                                REQUEST QUOTE
+                            <?php $request = get_field('header_cta', 'options') ?>
+                            <a href="<?php echo $request['url']; ?>" class="button nav-tab-button">
+                                <?php echo $request['title'] ?>
                             </a>
+                            
+                            
+
                             
                             <?php
                             // wp_nav_menu(
