@@ -68,7 +68,7 @@
   .hamburger {
     background-color: $black;
     border-radius: 0;
-    height: 4px;
+    height: 6px;
     padding: 0;
     line-height: 0;
     position: relative;
@@ -104,25 +104,25 @@
       background-color: $black;
       border-radius: 0;
       display: block;
-      height: 4px;
+      height: 6px;
       position: absolute;
       right: 0;
-      top: -10px;
+      top: -11px;
       transition: top 75ms ease .12s,opacity 75ms ease;
-      width: 100%;
+      width: 85%;
     }
 
     &:after {
-      bottom: -10px;
+      bottom: -11px;
       background-color: $black;
       border-radius: 0;
       content: "";
       display: block;
-      height: 4px;
+      height: 6px;
       position: absolute;
       right: 0;
       transition: bottom 75ms ease 0.12s, transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-      width: 100%;
+      width: 85%;
     }
 
     &:active, &:focus {

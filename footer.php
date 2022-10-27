@@ -13,7 +13,7 @@
 <footer id="colophon" class="footer">
   <div class="container narrow">
     <div class="row">
-      <div class="col-md-7">
+      <div class="col-lg-7">
           <div class="footer-primary">
               <div class="footer-branding">
                   <div class="footer-branding-logo">
@@ -34,18 +34,18 @@
             <?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'container_class' => 'footer-menu' ) ); ?>
             <div class="footer-contact">
                 <div class="row">
-                    <div class="col-md-6">
-                        <a href="tel:800-888-8888"><strong>800-888-8888</strong></a>
+                    <div class="col-lg-6">
+                        <a href="tel:<?php the_field('footer_phone', 'options') ?>"><strong><?php the_field('footer_phone', 'options') ?></strong></a>
                     </div>
-                    <div class="col-md-6">
-                        <a href="mailto:example@email.com"><strong>EXAMPLE@EMAIL.COM</strong></a>
+                    <div class="col-lg-6">
+                        <a href="mailto:<?php the_field('footer_email', 'options') ?>"><strong><?php the_field('footer_email', 'options') ?></strong></a>
                     </div>
                 </div>
                 
             </div>
           </div>
       </div>
-      <div class="col-md-5">
+      <div class="col-lg-5">
         <div class="footer-content">
             <?php the_field('footer_content', 'options') ?>
         </div>
@@ -55,17 +55,16 @@
  <div class="footer-legal-section">
      <div class="container narrow">
          <div class="row footer-legal-row">
-             <div class="col-md-6">
+             <div class="col-lg-6">
                  <div class="footer-legal-copyright">
-                 Copyright &copy;<?php echo date('Y'); ?> Behind The Work. ALL RIGHTS RESERVED
+                 Copyright &copy;<?php echo date('Y'); ?> <?php the_field('footer_legal', 'options') ?>
                  </div>
              </div>
-              <div class="col-md-6 flex-right">
-                  <ul class="footer-legal-links">
-                      <li><a href="">TERMS &amp; CONDITIONS</a></li>
-                      <li><a href="">PRIVACY POLICY</a></li>
-                  </ul>
-              </div>
+              <div class="col-lg-6 flex-right footer-legal-links">
+                  <?php if(get_field('footer_links', 'options')) : ?>
+                  <?php the_field('footer_links', 'options') ?>
+              <?php endif; ?>
+            </div>
          </div>
      </div>
  </div>

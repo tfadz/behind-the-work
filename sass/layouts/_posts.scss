@@ -1,0 +1,50 @@
+.single {
+  .contributer {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: $regular;
+    color: $gray-light;
+    display: block;
+  }
+
+  &-featured-image {
+    padding-bottom: 2rem;
+
+    img {
+      height: 600px;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  &-icons {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: $bold;
+    font-family: $secondary-font;
+    justify-content: flex-end;
+
+    li {
+      &:first-child {
+        margin-right: 1rem;
+        font-size: 12px;
+        letter-spacing: 0.1em;
+      }
+
+      &:not(:last-child) {
+        margin-right: .85rem;
+
+        a {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .wp-block-spacer {
+    @media (max-width: $medium) {
+      height: 50px !important;
+    }
+  }
+}

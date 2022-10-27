@@ -15,6 +15,10 @@
                 <?php $img = get_sub_field('image') ?>
                 <div>
                     <img src="<?php echo $img['url'] ?>" />
+                    <div class="slick-arrows-wrapper mobile">
+                        <button class="mobile-prev"></button>
+                        <button class="mobile-next"></button>
+                    </div>
                     <div class="content"><p><?php the_sub_field('text') ?></p></div>
                 </div>
             <?php endwhile; endif; ?>

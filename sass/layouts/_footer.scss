@@ -3,6 +3,12 @@
   background: $black;
   color: $white;
 
+  @media (max-width: $medium) {
+    > .container > .row {
+      flex-direction: column-reverse;
+    }
+  }
+
   &-primary {
     max-width: 440px;
 
@@ -19,6 +25,12 @@
     border-bottom: 1px solid $white;
     margin-bottom: 1rem;
 
+    @media (max-width: $medium) {
+      display: block;
+      text-align: center;
+      border: none;
+    }
+
     &-logo {
       padding-right: 1rem;
       flex: 2;
@@ -31,6 +43,13 @@
     &-social {
       flex: 1;
       display: flex;
+
+      @media (max-width: $medium) {
+        display: block;
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
 
       a {
         border-radius: 100%;
@@ -66,6 +85,12 @@
     border-top: 1px solid $white;
     padding: 1rem 0;
 
+    @media (max-width: $medium) {
+      display: block;
+      text-align: center;
+      border: none;
+    }
+
     a {
       font-family: $secondary-font;
       font-size: 12px;
@@ -76,6 +101,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+
+    @media (max-width: $medium) {
+      display: block;
+      text-align: center;
+    }
 
     li {
       margin: 0 0 1rem 0;
@@ -88,6 +118,10 @@
       font-weight: $bolder;
       font-size: 12px;
 
+      @media (max-width: $medium) {
+        text-align: center;
+      }
+
       &:hover {
         color: $gray-light;
       }
@@ -98,6 +132,12 @@
     border: 1px solid $white;
     padding: 3.5rem 2rem;
     text-align: center;
+
+    @media (max-width: $medium) {
+      display: block;
+      margin-bottom: 4rem;
+      padding: 2rem;
+    }
 
     h5 {
       line-height: 40px;
@@ -113,11 +153,22 @@
     &-section {
       border-top: 1px solid #8D909A;
       margin-top: 2rem;
+
+      @media (max-width: $medium) {
+        .flex-right {
+          justify-content: center;
+        }
+      }
     }
 
     &-row {
       align-items: center;
       justify-content: space-around;
+
+      @media (max-width: $medium) {
+        display: block;
+        text-align: center;
+      }
     }
 
     &-copyright {
@@ -129,6 +180,11 @@
     }
 
     &-links {
+      @media (max-width: $medium) {
+        display: block;
+        text-align: center;
+      }
+
       li {
         display: inline-block;
         line-height: 1;

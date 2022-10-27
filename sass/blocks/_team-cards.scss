@@ -223,11 +223,20 @@
       grid-column: 1 / -1;
       height: 451px;
 
+      @media (max-width: $medium) {
+        height: auto;
+        display: block;
+      }
+
       .team-cards-card__body {
         width: 100%;
 
         .featured-img, .team-cards-card__title {
           width: 50%;
+
+          @media (max-width: $medium) {
+            width: 100%;
+          }
         }
 
         .team-cards-card__title {
@@ -237,8 +246,16 @@
           text-align: center;
           padding: 1rem;
 
+          @media (max-width: $medium) {
+            position: relative;
+            text-align: left;
+          }
+
           h5 {
             padding-top: 20vh;
+            @media (max-width: $medium) {
+              padding-top: 0;
+            }
           }
         }
       }

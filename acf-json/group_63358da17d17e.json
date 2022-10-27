@@ -4,12 +4,20 @@
     "fields": [
         {
             "key": "field_63358da1d8db4",
-            "label": "Video",
+            "label": "Embed",
             "name": "video_card",
             "type": "oembed",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6350aa3ebc693",
+                        "operator": "==",
+                        "value": "embed"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -25,7 +33,15 @@
             "type": "text",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6350aa3ebc693",
+                        "operator": "==",
+                        "value": "embed"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -44,7 +60,15 @@
             "type": "text",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6350aa3ebc693",
+                        "operator": "==",
+                        "value": "embed"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -63,7 +87,15 @@
             "type": "text",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6350aa3ebc693",
+                        "operator": "==",
+                        "value": "embed"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -113,5 +145,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664456138
+    "modified": 1666233649
 }

@@ -1,3 +1,9 @@
+@media (min-width: 992px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
 @media (min-width: 1280px) {
   .container {
     max-width: 1200px;
@@ -50,6 +56,10 @@
 
 .bold {
   font-weight: $bold;
+}
+
+.pull-up {
+  margin-top: -10rem;
 }
 
 .m0 {

@@ -1,67 +1,3 @@
-.slick-arrows {
-  margin: 0 0 2rem 0;
-  position: relative;
-  height: auto;
-
-  button {
-    background: none;
-    border-radius: 0;
-    border: 1px solid $white;
-    color: $white;
-    font-size: 0;
-    height: 2rem;
-    padding: 2px;
-    width: 2rem;
-
-    &.prev {
-      margin-right: 1.5rem;
-
-      &:before {
-        color: $white;
-        content: "\f053";
-        font-family: "Font Awesome 5 Pro";
-        font-size: 1.25rem;
-        display: inline-block;
-        font-size: 1rem;
-        font-weight: 900;
-        width: 1rem;
-      }
-    }
-
-    &.next {
-      &:before {
-        color: $white;
-        content: "\f054";
-        display: inline-block;
-        font-family: "Font Awesome 5 Pro";
-        font-size: 1rem;
-        font-weight: 900;
-        width: 1rem;
-      }
-    }
-
-    &:hover {
-      cursor: pointer;
-      background: $white;
-      outline: none;
-
-      &.next {
-        &:before {
-          content: "\f054";
-          color: $black;
-        }
-      }
-
-      &.prev {
-        &:before {
-          color: $black;
-          content: "\f053";
-        }
-      }
-    }
-  }
-}
-
 .slick-container {
   background: $black;
   margin: 2rem auto 0 auto;
@@ -76,6 +12,72 @@
   width: 100%;
   color: white;
   display: block;
+
+  &-section {
+    .slick-arrows {
+      margin: 0 0 2rem 0;
+      position: relative;
+      height: auto;
+
+      button {
+        background: none;
+        border-radius: 0;
+        border: 1px solid $white;
+        color: $white;
+        font-size: 0;
+        height: 2rem;
+        padding: 2px;
+        width: 2rem;
+
+        &.prev {
+          margin-right: 1.5rem;
+
+          &:before {
+            color: $white;
+            content: "\f053";
+            font-family: "Font Awesome 5 Pro";
+            font-size: 1.25rem;
+            display: inline-block;
+            font-size: 1rem;
+            font-weight: 900;
+            width: 1rem;
+          }
+        }
+
+        &.next {
+          &:before {
+            color: $white;
+            content: "\f054";
+            display: inline-block;
+            font-family: "Font Awesome 5 Pro";
+            font-size: 1rem;
+            font-weight: 900;
+            width: 1rem;
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+          background: $white;
+          outline: none;
+
+          &.next {
+            &:before {
+              content: "\f054";
+              color: $black;
+            }
+          }
+
+          &.prev {
+            &:before {
+              color: $black;
+              content: "\f053";
+            }
+          }
+        }
+      }
+    }
+  }
 
   .slick-slide {
     margin: 0;

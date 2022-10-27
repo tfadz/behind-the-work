@@ -1,6 +1,6 @@
 {
     "key": "group_634d9b613d575",
-    "title": "Slider- Design 3",
+    "title": "Slider - Design 3",
     "fields": [
         {
             "key": "field_634d9b615237e",
@@ -69,5 +69,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666030679
+    "modified": 1666139279
 }

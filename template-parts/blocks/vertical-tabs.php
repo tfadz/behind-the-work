@@ -24,18 +24,18 @@
                                     ?>
                                     <div role="tabpanel" class="tab-pane show fade <?php if ($i==0) { ?>in active<?php } ?>" id="<?php echo $string; ?>">
                                         <h4><?php the_sub_field('tab'); ?></h4>
-                                        <p><?php the_sub_field('content') ?></p>
-                                        <?php if(get_sub_field('cta')) : ?>
-                                            <?php $link = get_sub_field('cta_link'); ?>
-                                            <a class="cta-link" href=""><?php the_sub_field('cta') ?></a>
-                                        <?php endif; ?>
-                                        
+                                            <div class="vertical-tabs__content__inner">
+                                            <p><?php the_sub_field('content') ?></p>
+                                            <?php if(get_sub_field('cta')) : ?>
+                                                <?php $link = get_sub_field('cta_link'); ?>
+                                                <a class="cta-link" href=""><?php the_sub_field('cta') ?></a>
+                                            <?php endif; ?></div>
                                     </div>
                                     <?php $i++; endwhile; ?>
                                 </div>
                             <?php endif; ?>
-                </div>
-            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

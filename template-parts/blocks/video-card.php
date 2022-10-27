@@ -13,7 +13,6 @@ $iframe = $oembed_data->html;
 $pull_up = get_field('pull_up');
 ?>
 
-
 <figure class="video-card <?php if($pull_up) : ?>pull-up<?php endif; ?>">
 <a href="#lightbox" data-lity>    
 <img src="<?php echo $thumbnail ?>" alt="">

@@ -4,7 +4,8 @@
   overflow: hidden;
 
   @media (max-width: $medium) {
-    display: block;
+    flex-direction: column;
+    height: auto;
   }
 
   &-left {
@@ -15,18 +16,32 @@
 
     @media (max-width: $medium) {
       width: 100%;
+      order: 2;
+      overflow: inherit;
+      padding-right: 0;
     }
 
     &-logos {
       display: flex;
       align-items: center;
       padding: 2rem 0;
+      @media (max-width: $medium) {
+        flex-wrap: wrap;
+      }
 
       > div {
         text-align: center;
 
+        @media (max-width: $medium) {
+          width: 45%;
+        }
+
         &:not(:last-child) {
           margin-right: 2rem;
+
+          @media (max-width: $medium) {
+            margin: .5rem;
+          }
         }
       }
     }
@@ -41,6 +56,14 @@
 
     @media (max-width: $medium) {
       width: 100%;
+      order: 1;
+      text-align: center;
+      padding: 2rem 0 0 0;
+
+      p {
+        font-size: 32px;
+        line-height: normal;
+      }
     }
 
     &:before {
@@ -51,6 +74,10 @@
       left: 0;
       top: 0;
       width: 2px;
+
+      @media (max-width: $medium) {
+        content: none;
+      }
     }
 
     &:after {
@@ -62,6 +89,10 @@
       left: -4px;
       top: 479px;
       width: 5px;
+
+      @media (max-width: $medium) {
+        content: none;
+      }
     }
 
     p {

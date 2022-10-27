@@ -1,6 +1,10 @@
 .nav-tab {
   &:not(:last-child) {
     margin-right: 2.5rem;
+
+    @media (max-width: $large) {
+      margin-right: 2rem;
+    }
   }
 
   @media (max-width: $medium) {

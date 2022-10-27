@@ -7,7 +7,7 @@
             "label": "Featured Post",
             "name": "featured_post",
             "type": "relationship",
-            "instructions": "",
+            "instructions": "The form and text is located under \"Theme options - Resources\"",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -97,5 +97,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1665664854
+    "modified": 1666531496
 }

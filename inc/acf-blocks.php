@@ -165,6 +165,15 @@ function acf_blocks_init()
         'mode'              => 'edit',
         'icon' => file_get_contents( get_template_directory() . '/images/behind-symbol.svg' ),
     ));
+    
+    acf_register_block_type(array(
+        'name'              => 'slider_design4',
+        'title'             => __('Slider Design 4'),
+        'render_template'   => '/template-parts/blocks/slider-4.php',
+        'category'          => 'behind-blocks',
+        'mode'              => 'edit',
+        'icon' => file_get_contents( get_template_directory() . '/images/behind-symbol.svg' ),
+    ));
 
 
 }
@@ -172,5 +181,21 @@ function acf_blocks_init()
 if (function_exists('acf_register_block_type')) {
     add_action('acf/init', 'acf_blocks_init');
 }
+
+function behind_category( $categories, $post )
+{
+   return array_merge
+   (
+      $categories, array
+      (
+         array
+         (
+            'slug' => 'behind-blocks',
+            'title' => __('Behind Blocks', 'behind-blocks'),
+         ),
+      )
+   );
+}
+add_filter( 'block_categories_all', 'behind_category', 10, 2);
 
 

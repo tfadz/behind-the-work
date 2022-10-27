@@ -11,16 +11,52 @@
 
     > div {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
+
+      @media (max-width: $medium) {
+        align-items: flex-start;
+      }
     }
 
     .show-me {
-      display: block;
+      display: flex;
+      align-items: center;
       font-family: $secondary-font;
       font-size: 12px;
       font-weight: $bold;
       color: $white;
       padding-right: 1rem;
+
+      span {
+        display: flex;
+      }
+
+      @media (max-width: $medium) {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .facetwp-facet-search {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 8rem;
+    margin-bottom: 4rem;
+
+    .facetwp-search {
+      background: none;
+      border: 1px solid rgba($white, 0.5);
+      border-width: 0 0 1px 0;
+      border-radius: 0 !important;
+      padding: .35rem .8rem;
+      color: $white;
+      min-width: 150px !important;
+
+      &::placeholder {
+        font-size: 14px;
+      }
     }
   }
 
@@ -39,12 +75,15 @@
         font-size: 1.9rem;
         font-weight: 400;
       }
+
       .facetwp-page.prev {
         margin-right: 1rem;
       }
+
       .facetwp-page.next {
         margin-left: 1rem;
       }
+
       .facetwp-page:not(.prev):not(.next) {
         color: $black;
         border: 1px solid $white;
@@ -53,11 +92,11 @@
         width: 1rem;
         font-size: 0;
         margin: 0 .5rem;
+
         &.active {
           background: $white;
         }
       }
-      
     }
   }
 
@@ -103,10 +142,14 @@
     font-size: 12px !important;
     font-weight: $bolder;
     letter-spacing: 0.12em;
-    margin: 0 .85rem;
+    margin: 0 .85rem 1rem .85rem;
     padding: 1rem;
     text-align: center;
     text-transform: uppercase;
+
+    @media (max-width: $medium) {
+      margin: 0 .5rem 1rem .5rem;
+    }
 
     &:hover {
       background: $white !important;
@@ -127,6 +170,11 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 0;
+
+    @media (max-width: $medium) {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
   }
 
   .facetwp-counter {

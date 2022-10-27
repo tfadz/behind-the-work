@@ -1,5 +1,9 @@
 .title-block {
   padding: 2rem 0 8rem 3rem;
+  @media (max-width: $medium) {
+    display: block;
+    text-align: center;
+  }
 
   @media (max-width: $medium) {
     padding: 1rem 0 2rem 0;

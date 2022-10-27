@@ -1,0 +1,290 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.slider4 {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  color: white;
+  display: block;
+  overflow: hidden;
+
+  @media (max-width: $medium) {
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+  }
+
+  &-section {
+    background: $black;
+    color: $white;
+    padding: 5rem 0;
+    display: flex;
+    align-items: center;
+
+    @media (min-height: 1280px) {
+      min-height: 700px;
+    }
+
+    @media (max-width: $medium) {
+      display: block;
+    }
+  }
+
+  &.slick-initialized {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &-content {
+    max-width: 500px;
+    padding-top: 3rem;
+
+    @media (max-width: $medium) {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    // opacity: 0;
+    transition: .3s;
+
+    .section-heading {
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  &-image {
+    // opacity: 0;
+    transition: .3s;
+
+    @media (max-width: $medium) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img {
+      height: 400px;
+
+      @media (max-width: $medium) {
+        height: 300px;
+      }
+    }
+  }
+
+  // .slick-list, .slick-track {
+  //   height: 100% !important;
+  //   display: block !important;
+  // }
+
+  .slick-track, .slick-list {
+    @media (max-width: $medium) {
+      position: relative;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .slick-slide {
+    margin: 0;
+    position: relative;
+    float: none !important;
+    transition: .4s;
+
+    @media (max-width: $medium) {
+      padding: 2rem 0;
+      float: left !important;
+      width: 100%;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.slick-current {
+      // .slider4-image {
+      //   animation: fadeIn 1s ease-in-out forwards;
+      //   animation-delay: .25s;
+      // }
+      // 
+      // .slider4-content {
+      //   animation: fadeIn .7s ease-in-out forwards;
+      //   animation-delay: .65s;
+      // }
+   
+    }
+  }
+
+  &-section {
+    position: relative;
+    padding: 5rem 0 5rem 0;
+  }
+
+  &-heading {
+    h5 {
+      @include section-heading;
+
+      color: $white;
+    }
+  }
+
+  .slick-arrow {
+    right: 2rem;
+    position: absolute;
+    width: auto;
+    background: none;
+    border-radius: 0;
+    border: 1px solid $white;
+    color: $white;
+    font-size: 0;
+    height: 2rem;
+    padding: 2px;
+    width: 2rem;
+    margin: 5px 0;
+    top: 6rem;
+    z-index: 999;
+
+    @media (max-width: $medium) {
+      top: auto;
+      left: 0;
+    }
+
+    &.slick-prev {
+      &:before {
+        color: $white;
+        content: "\f106";
+        font-family: "Font Awesome 5 Pro";
+        font-size: 1.25rem;
+        display: inline-block;
+        font-size: 1rem;
+        font-weight: 900;
+        width: 1rem;
+
+        @media (max-width: $medium) {
+          content: "\f104";
+          font-family: "Font Awesome 5 Pro";
+        }
+      }
+    }
+
+    &.slick-next {
+      top: 9rem;
+
+      @media (max-width: $medium) {
+        top: 0;
+        left: 2.5rem;
+      }
+
+      &:before {
+        color: $white;
+        content: "\f107";
+        display: inline-block;
+        font-family: "Font Awesome 5 Pro";
+        font-size: 1rem;
+        font-weight: 900;
+        width: 1rem;
+
+        @media (max-width: $medium) {
+          content: "\f105";
+          font-family: "Font Awesome 5 Pro";
+        }
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      background: $white;
+      outline: none;
+
+      &.slick-next {
+        &:before {
+          content: "\f107";
+          color: $black;
+
+          @media (max-width: $medium) {
+            content: "\f105";
+            font-family: "Font Awesome 5 Pro";
+          }
+        }
+      }
+
+      &.slick-prev {
+        &:before {
+          color: $black;
+          content: "\f106";
+
+          @media (max-width: $medium) {
+            content: "\f104";
+            font-family: "Font Awesome 5 Pro";
+          }
+        }
+      }
+    }
+  }
+
+  .slider4-mobile-arrows {
+    position: relative;
+    padding: .5rem 0;
+    display: none;
+
+    @media (max-width: $medium) {
+      display: flex;
+    }
+
+    .slick-arrow {
+      position: relative;
+      right: auto;
+      padding: .2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.next-slide {
+        margin-left: 1rem;
+        &:before {
+          color: $white;
+          content: "\f107";
+          display: inline-block;
+          font-family: "Font Awesome 5 Pro";
+          font-size: 1rem;
+          font-weight: 900;
+          width: auto;
+
+          @media (max-width: $medium) {
+            content: "\f105";
+            font-family: "Font Awesome 5 Pro";
+          }
+        }
+      }
+
+      &.prev-slide {
+        &:before {
+          color: $white;
+          content: "\f106";
+          font-family: "Font Awesome 5 Pro";
+          font-size: 1.25rem;
+          display: inline-block;
+          font-size: 1rem;
+          font-weight: 900;
+          width: auto;
+
+          @media (max-width: $medium) {
+            content: "\f104";
+            font-family: "Font Awesome 5 Pro";
+          }
+        }
+      }
+    }
+  }
+}

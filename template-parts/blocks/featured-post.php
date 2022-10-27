@@ -35,7 +35,7 @@
     <?php endif; ?>
 </div>
 <div class="featured-post__right">
-    <?php echo do_shortcode('[gravityform id=3 name=Newsletter title=true description=true ajax=true]'); ?>
+    <div><?php the_field('resources_form', 'options') ?></div>
     <h6 class="text-center">FOLLOW US</h6>
     <div class="featured-post__right__social">
         <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>

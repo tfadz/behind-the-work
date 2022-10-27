@@ -94,7 +94,6 @@
   							slidesToShow: 1,
   							slidesToScroll: 1,
   							infinite: true,
-  							dots: true
   						}
   					},
   				]
@@ -128,6 +127,15 @@
   				prevArrow: $(".prev"),
   				nextArrow: $(".next"),
   				cssEase: 'ease-out',
+          responsive: [
+            {
+  						breakpoint: 768,
+  						settings: {
+                prevArrow: $(".mobile-prev"),
+                nextArrow: $(".mobile-next"),
+  						}
+  					},
+  				]
 
   			});
 
@@ -140,7 +148,7 @@
   				asNavFor: '.slick-overlay',
   				arrows: false,
   				cssEase: 'ease-out',
-  				variableWidth: true
+  				variableWidth: true,
 
   			});
 
@@ -177,6 +185,16 @@
   				cssEase: 'ease-out',
   				variableWidth: true,
   				focusOnSelect: true,
+          responsive: [
+            {
+  						breakpoint: 768,
+  						settings: {
+  							slidesToShow: 2,
+  							slidesToScroll: 1,
+  							infinite: true,
+  						}
+  					},
+  				]
   			});
 
   			var $slider3 = $('.slider3');
@@ -204,12 +222,46 @@
   					},
   				]
   			});
+        var $slider4 = $('.slider4');
+
+  			$slider4.slick({
+  				slidesToScroll: 1,
+  				autoplay: false,
+  				arrows: true,
+  				dots: false,
+          vertical: true,
+          verticalSwiping: true,
+  				cssEase: 'ease',
+  				speed: 350,
+  				infinite: true,
+          adaptiveHeight: true,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                vertical: false,
+                verticalSwiping: false,
+                appendArrows: '.slider4-mobile-arrows',
+                prevArrow: $('.prev-slide'),
+                nextArrow: $('.next-slide'),
+              }
+            },
+          ]
+  			});
   		},
 
   		tabs = function() {
   			$('.vertical-tabs__tabs li:first-child a, .timeline-tabs__tabs li:first-child a').trigger("click");
   			$('.horizontal-tabs .nav-pills li:first-child a').addClass('active');
   			$('.checklist-tabs .nav-pills li:first-child a').addClass('active');
+        if (window.matchMedia('(max-width: 1024px)').matches) {
+        	$('.vertical-tabs__content .tab-pane h4').click(function(event) {
+            $(this).next().toggle();
+          });
+          $('.timeline-tabs__content .tab-pane h4').click(function(event) {
+            $(this).next().toggle();
+          });
+        }
 
   		},
 

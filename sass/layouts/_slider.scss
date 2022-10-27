@@ -159,6 +159,10 @@
     max-width: 920px;
     margin: 0 auto;
 
+    @media (max-width: $small) {
+      padding: 0 3rem;
+    }
+
     h2 {
       padding-bottom: 3rem;
     }
@@ -314,6 +318,26 @@
   top: 15rem;
   height: auto;
 
+  @media (max-width: $medium) {
+    display: none;
+  }
+
+  &.mobile {
+    display: none;
+
+    @media (max-width: $medium) {
+      display: flex;
+      position: relative;
+      top: 12rem;
+      width: 100%;
+      padding-left: 1rem;
+
+      button:first-child {
+        margin-right: 1rem;
+      }
+    }
+  }
+
   &__main {
     margin: 1rem 0 0 4rem;
   }
@@ -328,7 +352,7 @@
     padding: 2px;
     width: 2rem;
 
-    &.prev {
+    &.prev, &.mobile-prev {
       margin-right: 1.5rem;
 
       &:before {
@@ -343,7 +367,7 @@
       }
     }
 
-    &.next {
+    &.next, &.mobile-next {
       &:before {
         color: $white;
         content: "\f054";
@@ -395,6 +419,12 @@
   &-section {
     position: relative;
     overflow: hidden;
+
+    @media (max-width: $medium) {
+      .slick-list {
+        overflow: inherit;
+      }
+    }
   }
 
   &-heading {
@@ -406,6 +436,14 @@
     top: 0;
     color: white;
     margin: 7rem 0 0 0;
+
+    @media (max-width: $medium) {
+      position: relative;
+      height: auto;
+      right: auto;
+      margin: 1rem 0;
+      width: auto;
+    }
 
     h5 {
       @include section-heading;
@@ -419,6 +457,10 @@
     width: 100%;
     position: relative;
 
+    @media (max-width: $medium) {
+      height: auto;
+    }
+
     &:before {
       content: "";
       background: rgba(black, 0.9);
@@ -429,6 +471,11 @@
       width: 50vw;
       height: 100%;
       z-index: 2;
+
+      @media (max-width: $medium) {
+        position: relative;
+        width: 100%;
+      }
     }
   }
 
@@ -441,6 +488,11 @@
     left: 0;
     z-index: 1;
     position: absolute;
+
+    @media (max-width: $medium) {
+      position: relative;
+      height: 350px;
+    }
   }
 
   .content {
@@ -455,9 +507,22 @@
     margin: 17rem auto 0 0;
     padding: 0;
 
+    @media (max-width: $medium) {
+      position: relative;
+      margin: 1rem 0 0 0;
+      max-width: 100%;
+      top: 15rem;
+      padding-left: 1rem;
+      z-index: 999;
+    }
+
     p {
       line-height: 1.5;
       max-width: 80%;
+
+      @media (max-width: $medium) {
+        max-width: 100%;
+      }
     }
   }
 }
@@ -474,6 +539,14 @@
   color: white;
   margin-top: 8rem;
   white-space: nowrap;
+
+  @media (max-width: $medium) {
+    position: relative !important;
+    height: auto;
+    right: auto;
+    max-width: 100% !important;
+    top: -30rem;
+  }
 
   .slick-list {
     margin: 0;

@@ -7,9 +7,12 @@
         </div>
         <div class="row pt1">
             <div class="col">
+                <div>
+                    <?php echo do_shortcode('[facetwp facet="search"]'); ?>
+                </div>
                 <div class="resources-gallery-pager">
                     <div>
-                        <div class="show-me">SHOW ME: <button value="Reset" onclick="FWP.reset()" class="facet-reset">ALL</button></div><?php echo do_shortcode('[facetwp facet="resources"]'); ?>
+                        <div class="show-me"><span>SHOW ME:</span> <button value="Reset" onclick="FWP.reset()" class="facet-reset">ALL</button></div><?php echo do_shortcode('[facetwp facet="resources"]'); ?>
                     </div>
                 </div>
             </div>
