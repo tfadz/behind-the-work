@@ -14,30 +14,12 @@ $pull_up = get_field('pull_up');
 ?>
 
 <figure class="video-card <?php if($pull_up) : ?>pull-up<?php endif; ?>">
-<a href="#lightbox" data-lity>    
-<img src="<?php echo $thumbnail ?>" alt="">
-<div class="video-card-cta">
-    <div>
-        <img src="<?php bloginfo('template_directory'); ?>/images/play-btn.svg" alt="">
-        <h6 class="cta"><?php the_field('video_card_cta') ?></h6>
-    </div>
-</div>
-<div class="video-card-content">
-    <div>
-        <h6><?php the_field('video_card_eyebrow') ?></h6>
-        <h2><?php the_field('video_card_title') ?></h2>
-
-    </div>
-</div>
-</a>
-</figure>
-<div id="lightbox" class="lity-hide">
     <?php 
     if ( $vid ) {
         if ( preg_match('/src="(.+?)"/', $vid, $matches) ) {
             $src = $matches[1];
             $params = array(
-                'controls'    => 1,
+                'controls'    => 0,
                 'hd'        => 1,
                 'autoplay' => 0,
                 'loop' => 1
@@ -50,5 +32,40 @@ $pull_up = get_field('pull_up');
         echo '<div class="video-embed video-iframe">', $vid, '</div>';
     }
     ?>
+<div class="video-card-cta">
+    <div class="video-card-cta-btn">
+        <img src="<?php bloginfo('template_directory'); ?>/images/play-btn.svg" alt="">
+        <h6 class="cta"><?php the_field('video_card_cta') ?></h6>
+    </div>
+    <div class="video-card-pause"></div>
 </div>
+<div class="video-card-content">
+    <div>
+        <h6><?php the_field('video_card_eyebrow') ?></h6>
+        <h2><?php the_field('video_card_title') ?></h2>
+
+    </div>
+</div>
+</a>
+</figure>
+
 <?php endif; ?>
+
+<script>
+ jQuery(function($) {
+     var player = new Vimeo.Player(document.querySelector('iframe'));
+     $('.video-card-cta-btn').click(function(e) {
+       player.play();
+       $(this).hide();
+       $('.video-card-content').hide();
+       $('.video-card-pause').addClass('show');
+     });
+     $('.video-card-pause').click(function(e) {
+       player.pause();
+       $('.video-card-cta-btn').show();
+       $(this).removeClass('show');
+       $('.video-card-content').show();
+     });
+
+ });
+</script>

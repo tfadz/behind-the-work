@@ -248,6 +248,18 @@
             },
           ]
   			});
+        
+      var maxHeight = -1;
+      $('.slider4 .slick-slide').each(function() {
+      	if ($(this).height() > maxHeight) {
+      		maxHeight = $(this).height();
+      	}
+      });
+      $('.slider4 .slick-slide').each(function() {
+      	if ($(this).height() < maxHeight) {
+      		$(this).css('margin', Math.ceil((maxHeight - $(this).height()) / 2) + 'px 0');
+      	}
+      });
   		},
 
   		tabs = function() {
@@ -307,6 +319,7 @@
   		teamCards = function() {
   			$('.team-cards-card').click(function(event) {
   				$(this).next().addClass('show');
+          $('.team-overlay').addClass('active');
   				event.stopPropagation();
   			});
 
@@ -314,6 +327,7 @@
   				var $teamCard = $('.team-cards-card__modal-wrapper');
   				if ($(e.target).is($teamCard) === false) {
   					$teamCard.removeClass("show");
+            $('.team-overlay').removeClass('active');
   				}
   			});
   		},
@@ -370,7 +384,8 @@
   				}
   			});
   		}
-
+      
+      // $('.home-hero-section').on('scroll',AOS.refreshHard);
 
   	return {
   		init: init

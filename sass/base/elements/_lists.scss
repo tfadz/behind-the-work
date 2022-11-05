@@ -18,3 +18,13 @@ li > ol {
   margin-bottom: 0;
   margin-left: 1.5em;
 }
+
+.single .site-main .entry-content {
+  ul {
+    list-style: disc;
+    padding: .75rem 0 1rem 2.5em;
+    li {
+      padding-bottom: .5rem;
+    }
+  }
+}

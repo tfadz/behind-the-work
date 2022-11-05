@@ -224,8 +224,6 @@
     z-index: 90;
   }
 
-
-
   #primary-menu {
     padding-top: 4.5rem;
     position: relative;
@@ -257,8 +255,8 @@
       }
 
       .sub-menu {
-        position: absolute;
-        top: 0;
+        position: fixed;
+        top: 73px;
         right: 0;
         width: 100%;
         height: 100%;

@@ -43,6 +43,7 @@
     &-social {
       flex: 1;
       display: flex;
+      justify-content: flex-end;
 
       @media (max-width: $medium) {
         display: block;
@@ -56,6 +57,7 @@
         border: 1px solid $white;
         width: 24px;
         height: 24px;
+        line-height: 0;
         text-align: center;
         display: inline-flex;
         justify-content: center;

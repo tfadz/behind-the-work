@@ -52,6 +52,9 @@
   }
 
   &__tabs {
+    list-style: none !important;
+    padding: 0 !important;
+
     li {
       margin-bottom: 1.5rem;
 
@@ -105,6 +108,7 @@
       font-family: $secondary-font;
       font-weight: $boldest;
       font-size: 0.75rem;
+      letter-spacing: 0.12em;
 
       &:hover, &:focus {
         background: $white;

@@ -65,6 +65,25 @@
             "media_upload": 1
         },
         {
+            "key": "field_635ebcc552f28",
+            "label": "Social Media",
+            "name": "footer_social",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_635a780e2804f",
             "label": "Legal",
             "name": "footer_legal",
@@ -139,5 +158,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666873598
+    "modified": 1667153112
 }

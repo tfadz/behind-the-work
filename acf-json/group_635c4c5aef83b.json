@@ -1,31 +1,9 @@
 {
-    "key": "group_632894a7cceed",
-    "title": "Slider - Resources",
+    "key": "group_635c4c5aef83b",
+    "title": "Slider - Resources Old",
     "fields": [
         {
-            "key": "field_635c4d578b5a7",
-            "label": "Pick a tag",
-            "name": "type_of_resource",
-            "type": "taxonomy",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "taxonomy": "resources_tags",
-            "add_term": 0,
-            "save_terms": 1,
-            "load_terms": 1,
-            "return_format": "object",
-            "field_type": "select",
-            "allow_null": 1,
-            "multiple": 0
-        },
-        {
-            "key": "field_632894afe9d60",
+            "key": "field_635c4c5b0f793",
             "label": "Resources - Heading (Small)",
             "name": "slider_resources",
             "type": "text",
@@ -44,7 +22,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_632894e4e9d61",
+            "key": "field_635c4c5b0f7a5",
             "label": "Resources - Title",
             "name": "slider_resources_title",
             "type": "text",
@@ -63,7 +41,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_632894f7e9d62",
+            "key": "field_635c4c5b0f7ab",
             "label": "Resources - CTA",
             "name": "slider_resources_cta",
             "type": "text",
@@ -82,7 +60,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_63289507e9d63",
+            "key": "field_635c4c5b0f7c6",
             "label": "Resources -  CTA  Link",
             "name": "slider_resources_cta_link",
             "type": "link",
@@ -112,8 +90,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667136965
+    "modified": 1666993270
 }

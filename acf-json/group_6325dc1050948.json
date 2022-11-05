@@ -3,6 +3,25 @@
     "title": "Vertical Tabs",
     "fields": [
         {
+            "key": "field_636306007a5fb",
+            "label": "Eyebrow",
+            "name": "vertical_tabs_eyebrow",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_6325dc1993fb3",
             "label": "Vertical Tabs",
             "name": "vertical_tabs",
@@ -38,7 +57,8 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_6325dc1993fb3"
                 },
                 {
                     "key": "field_6325f61987c27",
@@ -57,7 +77,8 @@
                     "placeholder": "",
                     "maxlength": "",
                     "rows": 4,
-                    "new_lines": "br"
+                    "new_lines": "br",
+                    "parent_repeater": "field_6325dc1993fb3"
                 },
                 {
                     "key": "field_6325f63c87c28",
@@ -76,7 +97,8 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_6325dc1993fb3"
                 },
                 {
                     "key": "field_6325f64187c29",
@@ -91,9 +113,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array"
+                    "return_format": "array",
+                    "parent_repeater": "field_6325dc1993fb3"
                 }
-            ]
+            ],
+            "rows_per_page": 20
         },
         {
             "key": "field_6327ce582e0f8",
@@ -133,5 +157,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1663553197
+    "modified": 1667434011
 }

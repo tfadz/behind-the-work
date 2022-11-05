@@ -24,6 +24,7 @@
     height: 100%;
     overflow: hidden;
     position: relative;
+
     @media (max-width: $medium) {
       margin-bottom: 1.5rem;
     }
@@ -52,9 +53,10 @@
       z-index: 1;
       transition: all 350ms cubic-bezier(0, 0, 0.2, 1);
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       top: -100%;
       text-align: left;
+      padding-top: 2.5rem;
 
       p {
         text-align: left;

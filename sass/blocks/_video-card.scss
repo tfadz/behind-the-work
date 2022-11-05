@@ -5,8 +5,16 @@
   height: 624px;
   margin: 4rem auto;
 
+  @media (max-width: $small) {
+    height: auto;
+  }
+
   &.pull-up {
     margin: -12rem auto 2rem auto;
+
+    @media (max-width: $small) {
+      margin: 0;
+    }
   }
 
   &:before {
@@ -20,12 +28,21 @@
     background: rgba($black, 0.5);
   }
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  .video-iframe {
     position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &-cta {
@@ -51,6 +68,11 @@
       width: 160px;
       height: 160px;
       margin-bottom: .85rem;
+
+      @media (max-width: $small) {
+        height: 100px;
+        width: 100px;
+      }
     }
   }
 
@@ -67,6 +89,21 @@
 
     h6, h2 {
       color: $white;
+    }
+  }
+
+  &-pause {
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+    display: none;
+
+    &.show {
+      display: flex;
     }
   }
 }

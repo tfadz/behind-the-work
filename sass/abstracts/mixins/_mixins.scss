@@ -27,3 +27,16 @@
 @mixin padding-top {
   padding-top: 5rem;
 }
+
+@mixin cta {
+  display: inline-block;
+  font-family: $secondary-font;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  font-weight: $bolder;
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-underline-offset: 0.7em;
+  text-decoration-thickness: 2px;
+
+}
