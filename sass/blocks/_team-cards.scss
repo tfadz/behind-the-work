@@ -51,6 +51,26 @@
         }
       }
 
+      .instagram {
+        position: absolute;
+        right: 4rem;
+        top: 1.25rem;
+        width: 2rem;
+        height: 2rem;
+        z-index: 5;
+        background: $black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+
+        .fab {
+          color: $white;
+          font-weight: 400;
+          font-size: 1.45rem;
+        }
+      }
+
       .featured-img {
         background-size: cover;
         background-position: center;
@@ -140,7 +160,11 @@
             display: flex;
             justify-content: flex-end;
 
-            .linkedin {
+            .instagram {
+              margin-right: 1rem;
+            }
+
+            .linkedin, .instagram {
               background: $black;
               display: flex;
               justify-content: center;
@@ -151,6 +175,14 @@
                 color: $white;
                 font-weight: 400;
                 font-size: 1.45rem;
+              }
+
+              &:hover {
+                text-decoration: none;
+
+                .fab {
+                  color: $gray;
+                }
               }
             }
           }

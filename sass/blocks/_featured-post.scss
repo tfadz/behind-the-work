@@ -5,6 +5,7 @@
 
   @media (max-width: $medium) {
     display: block;
+    padding: 2rem 0;
   }
 
   &__img {
@@ -13,6 +14,10 @@
     position: relative;
     overflow: hidden;
     width: 100%;
+
+    @media (max-width: $xsmall) {
+      height: 250px;
+    }
 
     img {
       object-fit: cover;
@@ -32,6 +37,10 @@
 
     h4 {
       padding-bottom: 2rem;
+
+      @media (max-width: $xsmall) {
+        padding-bottom: 1rem;
+      }
     }
 
     .category, .cta {
@@ -43,11 +52,14 @@
     .cta {
       display: block;
       margin: 8px 0;
-      text-transform: uppercase;
-      font-weight: $bolder;
       text-decoration: underline;
-      text-underline-offset: 0.65em;
-      text-decoration-thickness: 1px;
+      text-underline-offset: 0.95em;
+      text-decoration-thickness: 2px;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-family: $secondary-font;
+      font-weight: $bolder;
+      letter-spacing: 0.12em;
     }
 
     .item {

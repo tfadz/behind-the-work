@@ -17,8 +17,8 @@
             },
             "taxonomy": "resources_tags",
             "add_term": 0,
-            "save_terms": 1,
-            "load_terms": 1,
+            "save_terms": 0,
+            "load_terms": 0,
             "return_format": "object",
             "field_type": "select",
             "allow_null": 1,
@@ -115,5 +115,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667136965
+    "modified": 1668133277
 }

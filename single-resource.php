@@ -79,14 +79,15 @@ get_header();
                                         ?>
                                         <h5><?php the_title(); ?></h5>
                                         <?php
-                                        $terms = get_the_terms($post->ID, 'resource_type');
+                                        $cta = get_field('resource_cta', $post->ID);
+                                        if($cta) :
+                                            echo '<h6 class="cta">' . $cta . '</h6>';
+                                            else :
                                         foreach ($terms as $term) {
                                             echo '<h6 class="cta">' . $term->description . '</h6>';
                                         }
-                                        ?>
-
-
-                                        
+                                    endif;
+                                    ?>
                                     </div>
                                 </a>
                             </div>

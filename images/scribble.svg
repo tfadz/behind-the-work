@@ -1,10 +1,9 @@
-<svg width="46" height="53" viewBox="0 0 46 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_773_24555)">
-<path d="M8.9478 16.2977C8.9478 17.9189 18.0677 14.8566 18.0677 16.2977C18.0677 20.2607 0 23.1429 0 27.2861C0 32.1498 26.8434 22.6025 26.8434 27.2861C26.8434 31.9696 2.23695 32.51 2.23695 37.9142C2.23695 41.5169 24.6064 33.4107 24.6064 37.9142" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<defs>
-<clipPath id="clip0_773_24555">
-<rect width="46" height="53" fill="white"/>
-</clipPath>
-</defs>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="27px" viewBox="0 0 31 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>scribble</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="scribble" transform="translate(2.000000, 1.000000)" stroke="#000000" stroke-width="3">
+            <path d="M8.9478,1.2977 C8.9478,2.9189 18.0677,-0.1434 18.0677,1.2977 C18.0677,5.2607 0,8.1429 0,12.2861 C0,17.1498 26.8434,7.6025 26.8434,12.2861 C26.8434,16.9696 2.23695,17.51 2.23695,22.9142 C2.23695,26.5169 24.6064,18.4107 24.6064,22.9142" id="Path"></path>
+        </g>
+    </g>
 </svg>

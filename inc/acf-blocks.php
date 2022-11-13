@@ -174,6 +174,24 @@ function acf_blocks_init()
         'mode'              => 'edit',
         'icon' => file_get_contents( get_template_directory() . '/images/behind-symbol.svg' ),
     ));
+    
+    acf_register_block_type(array(
+        'name'              => 'results',
+        'title'             => __('Results'),
+        'render_template'   => '/template-parts/blocks/results.php',
+        'category'          => 'behind-blocks',
+        'mode'              => 'edit',
+        'icon' => file_get_contents( get_template_directory() . '/images/behind-symbol.svg' ),
+    ));
+    
+    acf_register_block_type(array(
+        'name'              => 'callout',
+        'title'             => __('Callout Block'),
+        'render_template'   => '/template-parts/blocks/callout-block.php',
+        'category'          => 'behind-blocks',
+        'mode'              => 'edit',
+        'icon' => file_get_contents( get_template_directory() . '/images/behind-symbol.svg' ),
+    ));
 
 
 }

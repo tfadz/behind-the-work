@@ -1,26 +1,42 @@
 .testimonials {
-	@include section-padding;
+  @include section-padding;
 
   h3 {
     text-align: center;
-		padding-bottom: 3rem;
+    padding-bottom: 3rem;
 
     @include section-heading;
+
+    @media (max-width: $xsmall) {
+      padding: 4rem 0 2rem 0;
+    }
   }
-	&.reversed {
-		background: $black;
-		
-		*, h6 {
-			color: $white;
-		}
-		.testimonials-slider .slick-arrow, .testimonials-slider .slick-dots li button {
-			border: 1px solid $white;
-		}
-		.testimonials-slider .slick-dots li.slick-active button {
-			background: $white;
-		}
-		.testimonials-slider .slick-arrow.slick-next:before, .testimonials-slider .slick-arrow.slick-prev:before {
-			color: $white;
-		}
-	}
+
+  .testimonial {
+    h6 {
+      @media (max-width: $xsmall) {
+        padding-bottom: 4rem;
+      }
+    }
+  }
+
+  &.reversed {
+    background: $black;
+
+    *, h6 {
+      color: $white;
+    }
+
+    .testimonials-slider .slick-arrow, .testimonials-slider .slick-dots li button {
+      border: 1px solid $white;
+    }
+
+    .testimonials-slider .slick-dots li.slick-active button {
+      background: $white;
+    }
+
+    .testimonials-slider .slick-arrow.slick-next:before, .testimonials-slider .slick-arrow.slick-prev:before {
+      color: $white;
+    }
+  }
 }

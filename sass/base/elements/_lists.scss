@@ -20,11 +20,37 @@ li > ol {
 }
 
 .single .site-main .entry-content {
-  ul {
+  .alignwide {
+    @extend .narrow;
+  }
+
+  ul:not(.nav-pills) {
     list-style: disc;
     padding: .75rem 0 1rem 2.5em;
+
+    & ~ h3 {
+      padding-top: 2rem;
+    }
+
     li {
       padding-bottom: .5rem;
+    }
+  }
+
+  ul.timeline-tabs__tabs {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: inherit;
+    }
+  }
+
+  ol {
+    padding-left: 2rem;
+
+    li {
+      padding-bottom: 1rem;
     }
   }
 }

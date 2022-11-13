@@ -5,6 +5,10 @@
   margin-right: auto;
   margin-left: auto;
 
+  .alignwide {
+    padding: 0;
+  }
+
   @media (min-width: 576px) {
     max-width: 100%;
   }
@@ -44,6 +48,23 @@
 
 .wp-block-media-text__content {
   @media (max-width: $medium) {
-    padding: 1rem 0!important;
+    padding: 1rem 0 !important;
+  }
+}
+
+.wp-block-spacer {
+  @media (max-width: $xsmall) {
+    height: 50px !important;
+  }
+}
+
+.wp-block-column {
+  ul {
+    list-style: disc;
+    padding: .75rem 0 1rem 2.5em;
+
+    li {
+      padding-bottom: .5rem;
+    }
   }
 }

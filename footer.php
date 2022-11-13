@@ -33,11 +33,11 @@
                     <?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'container_class' => 'footer-menu' ) ); ?>
                     <div class="footer-contact">
                         <div class="row">
-                            <div class="col-lg-6">
-                                <a href="tel:<?php the_field('footer_phone', 'options') ?>"><strong><?php the_field('footer_phone', 'options') ?></strong></a>
+                            <div class="col-lg-5">
+                                <a class="phone" href="tel:<?php the_field('footer_phone', 'options') ?>"> <i class="far fa-phone-alt"></i> <strong><?php the_field('footer_phone', 'options') ?></strong></a>
                             </div>
-                            <div class="col-lg-6">
-                                <a href="mailto:<?php the_field('footer_email', 'options') ?>"><strong><?php the_field('footer_email', 'options') ?></strong></a>
+                            <div class="col-lg-7 flex-right">
+                                <a class="email" href="mailto:<?php the_field('footer_email', 'options') ?>"><i class="fal fa-envelope"></i> <strong><?php the_field('footer_email', 'options') ?></strong></a>
                             </div>
                         </div>
                         

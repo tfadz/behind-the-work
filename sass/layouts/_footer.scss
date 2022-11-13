@@ -16,6 +16,10 @@
       max-width: 100%;
       margin-bottom: 2rem;
     }
+
+    @media (max-width: $xsmall) {
+      margin-bottom: 0;
+    }
   }
 
   &-branding {
@@ -85,17 +89,50 @@
 
   &-contact {
     border-top: 1px solid $white;
-    padding: 1rem 0;
+    padding: 1.5rem 0 1rem 0;
+    max-width: 440px;
 
     @media (max-width: $medium) {
       display: block;
       text-align: center;
       border: none;
+      max-width: 100%;
+
+      .flex-right {
+        display: block;
+      }
     }
 
     a {
       font-family: $secondary-font;
       font-size: 12px;
+      font-weight: $bolder;
+      letter-spacing: 0.12em;
+
+      @media (max-width: $xsmall) {
+        display: block;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+
+      &.email {
+        font-size: 11px;
+      }
+
+      &.email, &.phone {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: $medium) {
+          display: block;
+          text-align: center;
+        }
+
+        .far, .fal {
+          margin-right: .5rem;
+          font-size: 1.1rem;
+        }
+      }
     }
   }
 
@@ -103,6 +140,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+    padding-bottom: 1rem;
+    column-gap: 6rem;
 
     @media (max-width: $medium) {
       display: block;
@@ -110,15 +149,23 @@
     }
 
     li {
-      margin: 0 0 1rem 0;
+      margin: 0 0 1.5rem 0;
+
+      &.cta {
+        a {
+          border: 1px solid $white;
+          padding: .85rem 3rem;
+        }
+      }
     }
 
     a {
       text-decoration: none;
       text-transform: uppercase;
       font-family: $secondary-font;
-      font-weight: $bolder;
+      font-weight: $boldest;
       font-size: 12px;
+      letter-spacing: 0.1em;
 
       @media (max-width: $medium) {
         text-align: center;
@@ -154,12 +201,16 @@
   &-legal {
     &-section {
       border-top: 1px solid #8D909A;
-      margin-top: 2rem;
+      margin-top: 4rem;
 
       @media (max-width: $medium) {
         .flex-right {
           justify-content: center;
         }
+      }
+
+      @media (max-width: $xsmall) {
+        margin-top: 1rem;
       }
     }
 
@@ -179,6 +230,7 @@
       font-weight: $bold;
       text-transform: uppercase;
       padding: 1rem 0;
+      letter-spacing: 0.12em;
     }
 
     &-links {
@@ -197,6 +249,7 @@
           font-size: 10px;
           font-weight: $bold;
           text-transform: uppercase;
+          letter-spacing: 0.12em;
         }
       }
     }

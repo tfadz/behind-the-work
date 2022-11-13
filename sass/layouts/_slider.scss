@@ -6,6 +6,12 @@
   position: relative;
   margin-bottom: 2rem;
 
+  &-cta {
+    a {
+      @include cta;
+    }
+  }
+
   .post {
     h4 {
       padding-bottom: .5rem;
@@ -19,6 +25,10 @@
       overflow: hidden;
       margin-bottom: 2rem;
 
+      @media (max-width: $xsmall) {
+        height: 190px;
+      }
+
       img {
         object-fit: cover;
         transition: .4s ease;
@@ -31,15 +41,22 @@
     &-content {
       h5 {
         text-decoration: none;
+        padding-bottom: 1rem;
+
+        @media (max-width: $xsmall) {
+          font-size: 1.125rem;
+        }
       }
 
       .cta {
         text-decoration: underline;
-        display: inline-block;
+        text-underline-offset: 0.75em;
+        text-decoration-thickness: 2px;
         text-transform: uppercase;
         font-size: 12px;
         font-family: $secondary-font;
         font-weight: $bolder;
+        letter-spacing: 0.12em;
       }
     }
 
@@ -93,6 +110,25 @@
     display: flex;
     justify-content: flex-end;
     margin-top: 1rem;
+
+    &.desktop {
+      display: flex;
+
+      @media (max-width: $small) {
+        display: none;
+      }
+    }
+
+    &.mobile {
+      display: none;
+
+      @media (max-width: $small) {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 2rem;
+        margin-top: 0;
+      }
+    }
 
     .slick-arrow {
       background: none;
@@ -163,6 +199,10 @@
       padding: 0 3rem;
     }
 
+    @media (max-width: $xsmall) {
+      padding: 0;
+    }
+
     h2 {
       padding-bottom: 3rem;
     }
@@ -219,6 +259,12 @@
       position: absolute;
       top: 4rem;
 
+      @media (max-width: $xsmall) {
+        left: 0;
+        top: auto;
+        bottom: -5px;
+      }
+
       &:before {
         color: $black;
         content: "\f053";
@@ -235,6 +281,12 @@
       right: -1rem;
       position: absolute;
       top: 4rem;
+
+      @media (max-width: $xsmall) {
+        right: 0;
+        top: auto;
+        bottom: -5px;
+      }
 
       &:before {
         color: $black;
@@ -264,6 +316,10 @@
     max-width: 800px;
     bottom: -1rem;
     position: absolute;
+
+    @media (max-width: $xsmall) {
+      bottom: 0;
+    }
 
     li {
       margin: 0 6px;
@@ -442,12 +498,16 @@
       position: relative;
       height: auto;
       right: auto;
-      margin: 1rem 0;
+      margin: 1rem 0 0 0;
       width: auto;
     }
 
     h5 {
       @include section-heading;
+
+      @media (max-width: $xsmall) {
+        padding-left: 1rem;
+      }
     }
   }
 

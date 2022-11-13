@@ -109,6 +109,25 @@
                     "parent_repeater": "field_63304dee86ec4"
                 }
             ]
+        },
+        {
+            "key": "field_636d34747c139",
+            "label": "Decrease font size for tabs",
+            "name": "horizontal_tabs_font",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 0
         }
     ],
     "location": [
@@ -129,5 +148,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664195639
+    "modified": 1668101298
 }

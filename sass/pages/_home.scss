@@ -1,3 +1,7 @@
 .home {
-  
+  .entry-content {
+    @media (max-width: $medium) {
+      margin-top: 0;
+    }
+  }
 }

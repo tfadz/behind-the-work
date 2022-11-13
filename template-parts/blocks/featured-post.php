@@ -23,12 +23,15 @@
             </div>
             <h4><?php echo get_the_title($p->ID); ?></h4>
             <?php
-            
+            $cta = get_field('resource_cta', $p->ID);
+            if($cta) :
+                echo '<h6 class="cta">' . $cta . '</h6>';
+                else :
             foreach ($terms as $term) {
-                if ($term->count > 0) {
-                    echo '<h6 class="cta">' . '<span>read</span> ' . $term->name . '</h6>';
-                }
+                echo '<h6 class="cta">' . $term->description . '</h6>';
             }
+        endif;
+
             ?>
         </a>
         <?php endforeach; ?>
@@ -38,10 +41,7 @@
     <div><?php the_field('resources_form', 'options') ?></div>
     <h6 class="text-center">FOLLOW US</h6>
     <div class="featured-post__right__social">
-        <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
-        <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-        <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
-        <a href="https://www.youtube.com"><i class="fa fa-youtube-play"></i></a>
+        <?php the_field('resources_social', 'options') ?>
     </div>
 </div>
 </article>

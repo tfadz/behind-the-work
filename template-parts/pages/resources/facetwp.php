@@ -12,13 +12,16 @@
             <h3><?php the_title(); ?></h3>
             <h5 class="contributer"><img src="<?php bloginfo('template_directory'); ?>/images/scribble-light.svg" alt=""> Contributed by <?php if($author) : ?>
                 <?php echo $author; ?><?php else : ?><?php echo get_the_author(); ?><?php endif; ?></h5>
-            <?php
-            $terms = get_the_terms($post->ID, 'resource_type');
-            foreach ($terms as $term) {
-                echo '<h6 class="cta">' . $term->description . '</h6>';
-            }
-            ?>
-        </a>
-    </div>
-<?php } ?>
-
+                    <?php
+                    $cta = get_field('resource_cta', $post->ID);
+                    if($cta) :
+                        echo '<h6 class="cta">' . $cta . '</h6>';
+                        else :
+                            foreach ($terms as $term) {
+                                echo '<h6 class="cta">' . $term->description . '</h6>';
+                            }
+                        endif;
+                        ?>
+                    </a>
+                </div>
+            <?php } ?>

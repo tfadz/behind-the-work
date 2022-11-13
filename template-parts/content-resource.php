@@ -34,18 +34,24 @@
                 </div>
                 <div class="row align-center pb2">
                     <div class="col-md-8">
-                        <h5 class="contributer"><img src="<?php bloginfo('template_directory'); ?>/images/scribble.svg" alt=""> Contributed by <?php echo get_the_author(); ?></h5>
+                        <?php $author = get_field('resource_author'); ?>
+                        <h5 class="contributer"><img src="<?php bloginfo('template_directory'); ?>/images/scribble.svg" alt=""> Contributed by <?php if($author) : ?>
+                            <?php echo $author; ?><?php else : ?><?php echo get_the_author(); ?><?php endif; ?></h5>
 
                     </div>
                     <div class="col-md-4">
+                        <?php
+                        global $wp;
+                        $current_url = home_url(add_query_arg(array(), $wp->request));
+                        ?>
                         <ul class="single-icons">
                             <li>SHARE</li>
-                            <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_the_permalink(); ?>" target="_blank"><i class="fab fa-facebook"></i>
+                            <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_the_permalink(); ?>" target="_blank"><i class="fab fa-facebook-f"></i>
                             </a></li>
-                            <li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php the_permalink() ?>&amp;title=<?php the_title() ?>&amp;summary=&amp;source=MccormickFoundation" target="_blank">
+                            <li><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=<?php the_permalink() ?>&amp;title=<?php the_title() ?>&amp;summary=&amp;source=BehindTheWork" target="_blank">
                                 <i class="fab fa-linkedin-in"></i>
                             </a></li>
-                            <li><a href="http://twitter.com/intent/tweet?text=<?php the_title(); ?>&amp;url=<?php the_permalink(); ?>" target="_blank"><i class="fab fa-twitter"></i>
+                            <li><a href="https://twitter.com/intent/tweet?text=<?php echo $current_url; ?>" target="_blank"><i class="fab fa-twitter"></i>
                             </a></li>
                         </ul>
                     </div>

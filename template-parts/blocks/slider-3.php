@@ -4,8 +4,8 @@
         <div class="col">
             
             <div class="slick-arrows">
-                <button class="prev"></button>
-                <button class="next"></button>
+                <button class="prev prev-arrow"></button>
+                <button class="next next-arrow"></button>
             </div>
             <div class="slider3">
                 <?php if (have_rows('slider_design3')) : while (have_rows('slider_design3')) : the_row(); ?>

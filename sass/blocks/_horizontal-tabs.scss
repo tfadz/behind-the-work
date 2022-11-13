@@ -5,13 +5,42 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    @media (max-width: $small) {
+      flex-direction: column;
+    }
 
     .nav-item {
       flex: 32.666%;
       border: 1px solid #111;
+      flex: 1;
+
+      @media (max-width: $xsmall) {
+        flex: none;
+      }
 
       &:has(> .nav-link.active) {
         background: #111;
+      }
+
+      &-mobile {
+        text-align: left;
+        height: 0;
+        overflow: hidden;
+        transition: .3s ease-in-out;
+
+        p {
+          padding: 2rem 1rem 1rem 1rem;
+        }
+
+        @media (max-width: $xsmall) {
+          &.show {
+            height: auto;
+          }
+        }
       }
     }
   }
@@ -36,6 +65,10 @@
 
     h5 {
       padding: 0;
+
+      &.small {
+        font-size: 1rem;
+      }
     }
 
     .svg {
@@ -73,6 +106,10 @@
     padding: 5rem 4rem;
     font-size: 1.125rem;
     width: 100%;
+
+    @media (max-width: $xsmall) {
+      display: none;
+    }
 
     h6 {
       br {

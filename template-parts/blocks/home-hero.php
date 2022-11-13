@@ -57,7 +57,7 @@
                         
                     </div>
                     <div class="home-hero-right">
-                        <div><?php the_field('home_hero_right_content') ?></div>
+                        <div data-aos="fade-up" data-aos-offset="0" data-aos-delay="250"><?php the_field('home_hero_right_content') ?></div>
                     </div>
                 </div>
             </div>

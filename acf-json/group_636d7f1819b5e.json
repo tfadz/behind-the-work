@@ -1,11 +1,11 @@
 {
-    "key": "group_633ddbcc2ce40",
-    "title": "Team Member",
+    "key": "group_636d7f1819b5e",
+    "title": "Callout",
     "fields": [
         {
-            "key": "field_633ddbccc1b52",
-            "label": "Title",
-            "name": "member_title",
+            "key": "field_636d7f186c86d",
+            "label": "Callout Title",
+            "name": "callout",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -22,44 +22,46 @@
             "append": ""
         },
         {
-            "key": "field_633ddc3e8aa0d",
-            "label": "Linkedin",
-            "name": "linkedin",
-            "type": "url",
+            "key": "field_636d7f286c86e",
+            "label": "Callout CTA",
+            "name": "callout_cta",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
-            "placeholder": ""
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
-            "key": "field_636b13eb18c7d",
-            "label": "Instagram",
-            "name": "instagram",
-            "type": "url",
+            "key": "field_636d7f306c86f",
+            "label": "Callout CTA Link",
+            "name": "callout_cta_link",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": ""
+            "return_format": "array"
         }
     ],
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "block",
                 "operator": "==",
-                "value": "team_members"
+                "value": "acf\/callout"
             }
         ]
     ],
@@ -72,5 +74,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667961888
+    "modified": 1668120399
 }

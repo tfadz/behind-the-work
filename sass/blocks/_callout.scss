@@ -1,0 +1,59 @@
+.callout {
+  background: $black;
+  color: $white;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  @media (max-width: $medium) {
+    padding: 1.5rem 1rem;
+  }
+
+  &-section {
+    margin: 1rem 0;
+  }
+
+  * {
+    color: $white;
+  }
+
+  h2 {
+    padding-left: 2rem;
+
+    @media (max-width: $medium) {
+      padding-left: 0;
+    }
+  }
+
+  &-cta {
+    display: flex;
+    justify-content: flex-end;
+
+    @media (max-width: $medium) {
+      justify-content: flex-start;
+    }
+
+    .cta-button {
+      align-items: center;
+      margin-right: 3rem;
+      align-self: center;
+      background: $black;
+      border: 1px solid $white;
+      color: $white;
+      display: flex;
+      font-family: $secondary-font;
+      font-size: .925rem;
+      font-weight: $bold;
+      letter-spacing: .12em;
+      line-height: 1;
+      padding: 1.25rem 1.5rem;
+      text-transform: uppercase;
+      margin-top: 2rem;
+
+      &:hover {
+        text-decoration: none;
+        background: $white;
+        color: $black;
+      }
+    }
+  }
+}

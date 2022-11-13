@@ -1,9 +1,6 @@
 .home-hero {
   display: flex;
 
-  // height: 520px;
-  // overflow: hidden;
-
   @media (max-width: $medium) {
     flex-direction: column;
     height: auto;
@@ -13,6 +10,11 @@
     height: 520px;
     overflow-y: scroll;
 
+    &::-webkit-scrollbar {
+      /* Safari and Chrome */
+      display: none;
+    }
+
     @media (max-width: $medium) {
       height: auto;
     }
@@ -21,8 +23,6 @@
   &-left {
     width: 55%;
     padding-right: 2rem;
-
-    // overflow-y: scroll;
     padding-bottom: 2rem;
     scrollbar-width: auto;
     scrollbar-color: #404040 #ffffff;
@@ -40,9 +40,6 @@
     &::-webkit-scrollbar-thumb {
       background-color: none;
       border-radius: 0px;
-
-      // border: 1px solid #333;
-   
     }
 
     @media (max-width: $medium) {
@@ -50,6 +47,12 @@
       order: 2;
       overflow: inherit;
       padding-right: 0;
+    }
+
+    h1 {
+      @media (max-width: $medium) {
+        text-align: center;
+      }
     }
 
     &-logos {
@@ -104,12 +107,16 @@
       }
     }
 
+    @media (max-width: $xsmall) {
+      padding-top: 0;
+    }
+
     &:before {
       content: "";
       border-left: 3px solid $black;
       height: 440px;
       position: absolute;
-      left: 0;
+      left: -1rem;
       top: 0;
       width: 2px;
 
@@ -125,7 +132,7 @@
       font-size: 1.5rem;
       height: auto;
       position: absolute;
-      left: -6px;
+      left: -22px;
       top: 458px;
       width: 1rem;
 

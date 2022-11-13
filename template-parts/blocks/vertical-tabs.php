@@ -29,7 +29,8 @@
                                             <p><?php the_sub_field('content') ?></p>
                                             <?php if(get_sub_field('cta')) : ?>
                                                 <?php $link = get_sub_field('cta_link'); ?>
-                                                <a class="cta-link" href=""><?php the_sub_field('cta') ?></a>
+                                                
+                                                <a class="cta-link" href="<?php if($link) : ?><?php echo $link['url'] ?><?php endif; ?>"><?php the_sub_field('cta') ?></a>
                                             <?php endif; ?></div>
                                     </div>
                                     <?php $i++; endwhile; ?>
