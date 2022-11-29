@@ -1,5 +1,6 @@
 .title-block {
   padding: 2rem 0 8rem 3rem;
+
   @media (max-width: $medium) {
     display: block;
     text-align: center;
@@ -15,6 +16,10 @@
 
   h1 {
     padding-bottom: 1.75rem;
+
+    @media (max-width: $xsmall) {
+      font-size: 2.5rem;
+    }
   }
 
   h3 {

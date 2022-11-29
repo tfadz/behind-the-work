@@ -98,6 +98,12 @@
       width: 100%;
       z-index: 10;
 
+      @media (max-width: $medium) {
+        overflow-y: scroll;
+        height: 100%;
+        padding-bottom: 5rem;
+      }
+
       .close-btn {
         display: block;
         color: $white;
@@ -111,6 +117,11 @@
         top: -2rem;
         width: 1.75rem;
         z-index: 5;
+
+        @media (max-width: $medium) {
+          top: 0;
+          right: 0;
+        }
 
         &:hover {
           background: $white;
@@ -135,8 +146,17 @@
       overflow: hidden;
       height: 500px;
 
+      @media (max-width: $medium) {
+        height: 100%;
+        display: block;
+      }
+
       > div {
         width: 50%;
+
+        @media (max-width: $medium) {
+          width: 100%;
+        }
 
         &.left {
           overflow: hidden;
@@ -149,6 +169,11 @@
             position: absolute;
             top: 0;
             left: 0;
+
+            @media (max-width: $medium) {
+              position: relative;
+              height: 350px;
+            }
           }
         }
 

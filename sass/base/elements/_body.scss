@@ -9,4 +9,8 @@ body {
 
 html,body {
 	// overflow-x: hidden;
+	
+	&.noscroll {
+		overflow: hidden;
+	}
 }

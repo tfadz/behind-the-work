@@ -89,6 +89,20 @@
     top: 0;
     width: 45%;
 
+    &.desktop {
+      display: block;
+
+      @media (max-width: $medium) {
+        display: none;
+      }
+    }
+
+    &.mobile {
+      @media (max-width: $medium) {
+        display: block;
+      }
+    }
+
     > div {
       position: -webkit-sticky;
       position: sticky;

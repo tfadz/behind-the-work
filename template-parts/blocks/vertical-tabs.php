@@ -2,10 +2,15 @@
     <div class="container">
         <div class="row">
             <div class="col">
+                <?php $verteyebrow = get_field('vertical_tabs_eyebrow'); ?>
+                <div class="vertical-tabs-mobile-eyebrow"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
                 <div class="vertical-tabs-container">
                     <div class="vertical-tabs-col">
-                        <?php $verteyebrow = get_field('vertical_tabs_eyebrow'); ?>
-                        <?php if($verteyebrow) : ?><h4><?php echo $verteyebrow; ?></h4><?php endif; ?>
+                        <?php if($verteyebrow) : ?><h4 class="eyebrow"><?php echo $verteyebrow; ?></h4><?php endif; ?>
                         <?php if( have_rows('vertical_tabs') ): ?>
                             <ul class="nav vertical-tabs__tabs flex-column" id="myTab" role="tablist">
                                 <?php $i=0; while ( have_rows('vertical_tabs') ) : the_row(); ?>

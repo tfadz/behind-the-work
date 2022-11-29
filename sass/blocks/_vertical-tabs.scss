@@ -104,6 +104,7 @@
           padding-bottom: .5rem;
         }
       }
+
       .button {
         border: 1px solid $white;
       }
@@ -145,12 +146,15 @@
       }
 
       h4 {
-        font-size: 1.25rem;
+        font-size: 2rem;
+        font-family: $primary-font;
+        -webkit-font-smoothing: auto;
         font-weight: $regular;
         color: $white;
         position: relative;
         display: block;
         width: 100%;
+        padding-right: 3.5rem;
 
         &:after {
           content: "\f107";

@@ -15,7 +15,7 @@
                             </div>
                             
                             <div class="cards-grid-card__overlay">
-                                <div><?php the_sub_field('overlay') ?></div>
+                                <p><?php the_sub_field('overlay') ?></p>
                             </div>
                         </article>
                     <?php endwhile; endif; ?>

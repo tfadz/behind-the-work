@@ -142,6 +142,16 @@
   				arrows: false,
   				cssEase: 'ease-out',
   				variableWidth: true,
+          responsive: [
+            {
+  						breakpoint: 768,
+  						settings: {
+              	slidesToShow: 1,
+                variableWidth: false,
+
+  						}
+  					},
+  				]
 
   			});
 
@@ -170,7 +180,7 @@
   				slidesToScroll: 1,
   				dots: false,
   				infinite: true,
-  				speed: 300,
+  				speed: 500,
   				fade: true,
   				centerMode: false,
   				asNavFor: '.slider2',
@@ -182,9 +192,9 @@
             {
   						breakpoint: 768,
   						settings: {
-  							slidesToShow: 2,
+  							slidesToShow: 1,
   							slidesToScroll: 1,
-  							infinite: true,
+                fade: false
   						}
   					},
   				]
@@ -321,6 +331,7 @@
   			$('.team-cards-card').click(function(event) {
   				$(this).next().addClass('show');
           $('.team-overlay').addClass('active');
+          $('body').addClass('noscroll');
   				event.stopPropagation();
   			});
 
@@ -329,6 +340,7 @@
   				if ($(e.target).is($teamCard) === false) {
   					$teamCard.removeClass("show");
             $('.team-overlay').removeClass('active');
+              $('body').removeClass('noscroll');
   				}
   			});
   		},
@@ -386,7 +398,14 @@
   			});
   		}
       
-      // $('.home-hero-section').on('scroll',AOS.refreshHard);
+      if (window.matchMedia('(max-width: 768px)').matches) {
+        $('.home-hero h1').insertBefore('.home-hero-right >div').addClass('pt2 pb2');
+        
+        $('.vertical-tabs').each(function(event) {
+          var $eyebrow = $(this).find('.vertical-tabs-col .eyebrow');
+          $(this).find('.vertical-tabs-mobile-eyebrow').html($eyebrow);
+        });
+      }
 
   	return {
   		init: init

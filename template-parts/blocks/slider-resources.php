@@ -24,12 +24,12 @@
         </div>
         <div class="row">
             <div class="col">
-                <p class="section-heading resources-slider-cta dark">
-                    <?php $res_ctalink = get_field('slider_resources_cta_link') ?>
-                    <?php if($res_ctalink) : ?>
+                <?php $res_ctalink = get_field('slider_resources_cta_link') ?>
+                <?php if($res_ctalink) : ?>
+                    <p class="section-heading resources-slider-cta dark">
                         <a href="<?php echo $res_ctalink['url'] ?>"><?php the_field('slider_resources_cta') ?></a>
-                    <?php endif; ?>
-                </p>
+                    </p>
+                <?php endif; ?>
             </div>
         </div>
     </div>
